@@ -47,13 +47,13 @@ sigInsightList → sigInsightCard → sigRecordFormModal (user saves) → Acted 
 | Engine | `SigEngine`, `SigSource` (interface), `SigContext`, `SigInsight`, `SigConfig` (+ `SigConfig.Rule`), `SigAccess`, `SigRecordInfo`, `SigGuards`, `SigResponseService`, `SigOpportunityDefaults`, `SigFollowUpService`, `SigTokens`, `SigDates`, `SigClock`, `SigLog`, `SigException` |
 | Notes ("rules first, AI second") | `SigNote`, `SigNoteVerdict`, `SigNoteProvider` (interface), `SigNoteClassifier` (interface), `SigActivityNoteProvider`, `SigKeywordNoteClassifier` |
 | Sample signals | `SigStalledOpportunitySource` (Next Best Action), `SigFieldChangeSource` (Insight), `SigNoteSignalSource` (Insight) |
-| Endpoints | `SigCardController` (components), `SigAgentAction` ("Show Signals"), `SigRecordResponseAction` ("Record Signal Not Now") |
+| Endpoints | `SigCardController` (components); agent actions `SigFindRecordAction`, `SigGetSignalsAction`, `SigAgentAction` (Show Signals), `SigPastResponsesAction`, `SigGetFollowUpsAction`, `SigCreateFollowUpAction`, `SigRecordResponseAction` |
 | UI | `sigInsightList` (record page), `sigInsightCard`, `sigRecordFormModal` |
-| Agent renderer (optional, `agent-app/`) | `sigAgentCards` LWC and the `sigSignalCards` Lightning Type |
+| Agent renderers (optional, `agent-app/`) | `sigAgentCards` + `sigSignalCards` Lightning Type; `sigAgentFollowUp` + `sigFollowUpDraft` Lightning Type |
 | Data | `Signal_Response__c` (private sharing), `Signal_Log__c` |
 | Configuration | `Signal_Definition__mdt`, `Signal_Parameter__mdt`, `Signal_Audience__mdt`, plus sample rows |
 | Access | Permission sets `Signal_Framework_User` and `Signal_Framework_Admin` |
-| Tests | `SigEngineTest`, `SigConfigTest`, `SigFieldChangeSourceTest`, `SigNoteSignalSourceTest`, `SigCardControllerTest`, `SigUtilitiesTest`, helper `SigTestData` |
+| Tests | `SigEngineTest`, `SigConfigTest`, `SigFieldChangeSourceTest`, `SigNoteSignalSourceTest`, `SigCardControllerTest`, `SigAgentActionsTest`, `SigUtilitiesTest`, helper `SigTestData` |
 
 ## Install
 
@@ -62,7 +62,7 @@ Requires the Salesforce CLI and an org on API 62.0 or later.
 ```bash
 sf org login web --alias target
 sf project deploy start --source-dir force-app --target-org target --test-level RunSpecifiedTests \
-  --tests SigEngineTest SigConfigTest SigFieldChangeSourceTest SigNoteSignalSourceTest SigCardControllerTest SigUtilitiesTest
+  --tests SigEngineTest SigConfigTest SigFieldChangeSourceTest SigNoteSignalSourceTest SigCardControllerTest SigAgentActionsTest SigUtilitiesTest
 sf org assign permset --name Signal_Framework_User --target-org target
 ```
 
@@ -170,15 +170,8 @@ and Event descriptions.
 
 ## Agent setup (optional)
 
-1. In Agentforce Builder, add the invocable actions **Show Signals** (`SigAgentAction`) and
-   **Record Signal Not Now** (`SigRecordResponseAction`) to your employee agent's subagent.
-   Pass the record Id from the conversation context; pass Agent = Insight or Next Best
-   Action if you run separate agents.
-2. Deploy `agent-app/`. It maps the Show Signals output to the `sigSignalCards` Lightning
-   Type, which renders `sigAgentCards`, the same list and card as the record page. Verify the
-   Lightning Type file format and the `lightning__AgentforceOutput` target against the
-   current Salesforce documentation for your release before deploying.
-3. The action also returns a plain-text `Summary` for channels that cannot show cards.
+See [AGENTFORCE.md](AGENTFORCE.md) for the two-agent setup (New Opportunity Insights and
+Next Best Action), the seven agent actions, suggested subagent instructions and a checklist.
 
 ## Security model
 
