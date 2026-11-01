@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Included_Record_Types__c</fullName>
+    <description>Client (Account) record type developer names, one per line or comma separated. Blank = all.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Included Record Types</label>
+    <length>1000</length>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rule_Sort_Parameter__c</fullName>
+    <description>Parameter used to choose between matching rules; the smallest value wins, e.g. Threshold_Days.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Rule Sort Parameter</label>
+    <length>80</length>
+    <required>false</required>
+    <type>Text</type>
+</CustomField>

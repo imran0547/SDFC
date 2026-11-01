@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Anchor_Required</fullName>
+    <active>true</active>
+    <description>A response must reference a client or an Opportunity.</description>
+    <errorConditionFormula>AND(ISBLANK(Client__c), ISBLANK(Opportunity__c))</errorConditionFormula>
+    <errorMessage>A signal response needs a Client or an Opportunity.</errorMessage>
+</ValidationRule>

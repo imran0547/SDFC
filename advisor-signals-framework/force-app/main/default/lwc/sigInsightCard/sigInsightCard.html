@@ -1,0 +1,67 @@
+<template>
+    <article class="slds-box slds-box_x-small slds-m-bottom_small">
+        <div class="slds-grid slds-grid_align-spread slds-m-bottom_x-small">
+            <span class="slds-text-title_caps">{insight.changeType}</span>
+            <span>
+                <template lwc:if={isHigh}>
+                    <span class="slds-badge slds-theme_warning slds-m-right_xx-small">High</span>
+                </template>
+                <template lwc:if={hasConfidence}>
+                    <span class={confidenceClass}>{insight.confidence}</span>
+                </template>
+            </span>
+        </div>
+
+        <p class="slds-text-body_regular">{insight.prompt}</p>
+
+        <template lwc:if={hasEvidence}>
+            <div class="slds-text-body_small slds-text-color_weak slds-m-top_x-small">
+                <template lwc:if={insight.evidenceSummary}>
+                    <p>“{insight.evidenceSummary}”</p>
+                </template>
+                <p>{evidenceLine}</p>
+            </div>
+        </template>
+
+        <template lwc:if={insight.reminderText}>
+            <p class="slds-text-body_small slds-m-top_x-small">
+                <lightning-icon icon-name="utility:info" size="xx-small" class="slds-m-right_xx-small"></lightning-icon>
+                {insight.reminderText}
+            </p>
+        </template>
+
+        <template lwc:if={errorMessage}>
+            <div class="slds-text-color_error slds-text-body_small slds-m-top_x-small" role="alert">{errorMessage}</div>
+        </template>
+
+        <template lwc:if={isIdle}>
+            <template lwc:if={notSuggestedText}>
+                <p class="slds-text-body_small slds-text-color_weak slds-m-top_x-small">{notSuggestedText}</p>
+            </template>
+            <div class="slds-m-top_small">
+                <lightning-button
+                    variant="brand"
+                    label={insight.primaryLabel}
+                    onclick={handlePrimary}
+                    disabled={isBusy}
+                    class="slds-m-right_x-small"
+                ></lightning-button>
+                <lightning-button label={insight.secondaryLabel} onclick={handleSecondary} disabled={isBusy}></lightning-button>
+            </div>
+        </template>
+
+        <template lwc:if={isFollowUp}>
+            <p class="slds-m-top_small">{message}</p>
+            <div class="slds-m-top_x-small">
+                <template lwc:if={showTask}>
+                    <lightning-button label="Create a Task" onclick={handleTask} class="slds-m-right_x-small"></lightning-button>
+                </template>
+                <lightning-button variant="brand" label="Done" onclick={handleDone}></lightning-button>
+            </div>
+        </template>
+
+        <template lwc:if={isDone}>
+            <p class="slds-m-top_small slds-text-color_success">{message}</p>
+        </template>
+    </article>
+</template>

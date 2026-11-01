@@ -1,0 +1,34 @@
+<template>
+    <lightning-modal-header label={heading}></lightning-modal-header>
+    <lightning-modal-body>
+        <template lwc:if={notice}>
+            <div class="slds-notify slds-notify_alert slds-alert_warning slds-m-bottom_small" role="status">
+                {notice}
+            </div>
+        </template>
+        <template lwc:if={errorMessage}>
+            <div class="slds-notify slds-notify_alert slds-alert_error slds-m-bottom_small" role="alert">
+                {errorMessage}
+            </div>
+        </template>
+        <lightning-record-edit-form
+            object-api-name={objectApiName}
+            record-id={recordId}
+            record-type-id={recordTypeId}
+            onsuccess={handleSuccess}
+            onerror={handleError}
+        >
+            <lightning-messages></lightning-messages>
+            <template for:each={fieldList} for:item="f">
+                <lightning-input-field key={f.key} field-name={f.fieldName} value={f.value}></lightning-input-field>
+            </template>
+        </lightning-record-edit-form>
+    </lightning-modal-body>
+    <lightning-modal-footer>
+        <template lwc:if={errorMessage}>
+            <lightning-button label="Create manually" onclick={handleManual} class="slds-m-right_x-small"></lightning-button>
+        </template>
+        <lightning-button label="Cancel" onclick={handleCancel} class="slds-m-right_x-small"></lightning-button>
+        <lightning-button variant="brand" label="Save" onclick={handleSave} disabled={saveDisabled}></lightning-button>
+    </lightning-modal-footer>
+</template>

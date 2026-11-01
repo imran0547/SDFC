@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Record_Type__c</fullName>
+    <description>Record type developer name for a drafted Opportunity and for the duplicate check. Blank = any.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Opportunity Record Type</label>
+    <length>80</length>
+    <required>false</required>
+    <type>Text</type>
+</CustomField>

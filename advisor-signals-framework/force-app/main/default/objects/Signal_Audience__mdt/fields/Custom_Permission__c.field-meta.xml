@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Permission__c</fullName>
+    <description>Alternative to a permission set group: users with this custom permission may see the signal.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Custom Permission</label>
+    <length>80</length>
+    <required>false</required>
+    <type>Text</type>
+</CustomField>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agent__c</fullName>
+    <description>Which agent and card list shows the signal.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Agent</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Insight</fullName>
+                <default>false</default>
+                <label>Insight</label>
+            </value>
+            <value>
+                <fullName>Next Best Action</fullName>
+                <default>false</default>
+                <label>Next Best Action</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

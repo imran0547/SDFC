@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Response_Key__c</fullName>
+    <description>Agent | signal | anchor | evidence | user. Unique per advisor and signal instance.</description>
+    <externalId>true</externalId>
+    <label>Response Key</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>true</unique>
+    <caseSensitive>false</caseSensitive>
+</CustomField>

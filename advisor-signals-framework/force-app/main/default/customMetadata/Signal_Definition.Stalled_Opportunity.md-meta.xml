@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Stalled Opportunity</label>
+    <protected>false</protected>
+    <values>
+        <field>Is_Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Show_On_Ask__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Resurface_Days__c</field>
+        <value xsi:type="xsd:double">5</value>
+    </values>
+    <values>
+        <field>Allow_Task__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Secondary_Action_Label__c</field>
+        <value xsi:type="xsd:string">Not now</value>
+    </values>
+    <values>
+        <field>Task_Due_Business_Days__c</field>
+        <value xsi:type="xsd:double">2</value>
+    </values>
+    <values>
+        <field>Signal_Key__c</field>
+        <value xsi:type="xsd:string">STALLED_OPPORTUNITY</value>
+    </values>
+    <values>
+        <field>Agent__c</field>
+        <value xsi:type="xsd:string">Next Best Action</value>
+    </values>
+    <values>
+        <field>Anchor_Object__c</field>
+        <value xsi:type="xsd:string">Opportunity</value>
+    </values>
+    <values>
+        <field>Source_Class__c</field>
+        <value xsi:type="xsd:string">SigStalledOpportunitySource</value>
+    </values>
+    <values>
+        <field>Prompt_Template__c</field>
+        <value xsi:type="xsd:string">{OpportunityName} has stayed in {Stage} for {Days} days, which meets or exceeds the {Threshold}-day threshold for this stage.</value>
+    </values>
+    <values>
+        <field>Primary_Action__c</field>
+        <value xsi:type="xsd:string">Update Opportunity</value>
+    </values>
+    <values>
+        <field>Primary_Action_Label__c</field>
+        <value xsi:type="xsd:string">Update Opportunity</value>
+    </values>
+    <values>
+        <field>Rule_Sort_Parameter__c</field>
+        <value xsi:type="xsd:string">Threshold_Days</value>
+    </values>
+    <values>
+        <field>Task_Priority__c</field>
+        <value xsi:type="xsd:string">Normal</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,8 @@
+<template>
+    <template lwc:if={hasCards}>
+        <c-sig-insight-list cards={cards} record-id={recordId} card-title="Signals"></c-sig-insight-list>
+    </template>
+    <template lwc:else>
+        <p class="slds-p-around_small">{summary}</p>
+    </template>
+</template>
