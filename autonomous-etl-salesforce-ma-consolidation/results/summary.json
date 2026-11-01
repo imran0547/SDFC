@@ -1,0 +1,904 @@
+{
+ "env": {
+  "python": "3.13.18",
+  "machine": "x86_64",
+  "cpus_used": 2,
+  "platform": "Linux-6.18.44-fc-v185-x86_64-with-glibc2.39"
+ },
+ "scaling": [
+  {
+   "entities": 5000,
+   "source_records": 32040,
+   "summary": {
+    "A.Account": 3445,
+    "A.Contact": 8594,
+    "A.Opportunity": 6597,
+    "B.Account": 2516,
+    "B.Contact": 5898,
+    "B.Opportunity": 4990,
+    "entities.Account": 5000,
+    "entities.Contact": 13480,
+    "total_source_records": 32040
+   },
+   "runs": [
+    1.8453076839999767,
+    2.0038369959999045,
+    1.9798721280001246
+   ],
+   "timings": {
+    "extract": 0.4347597510000014,
+    "transform": 0.6541718170000195,
+    "validate": 0.023521948000052362,
+    "mdm": 0.7155590600000323,
+    "load": 0.151859552000019
+   },
+   "total": 1.9798721280001246,
+   "throughput": 16182.8633005525,
+   "golden_acc": 4963,
+   "golden_con": 13319,
+   "shards": 44,
+   "load": {
+    "Account": [
+     4963,
+     0
+    ],
+    "Contact": [
+     13319,
+     0
+    ],
+    "Opportunity": [
+     11343,
+     0
+    ]
+   },
+   "reconcile": {
+    "Account": {
+     "source": 5961,
+     "represented": 5920,
+     "quarantined": 52,
+     "unaccounted": 0
+    },
+    "Contact": {
+     "source": 14492,
+     "represented": 14087,
+     "quarantined": 405,
+     "unaccounted": 0
+    },
+    "Opportunity": {
+     "source": 11587,
+     "represented": 11343,
+     "quarantined": 244,
+     "unaccounted": 0
+    },
+    "fk_orphans_in_target": 0,
+    "opportunity_amount_checksum_match": true
+   },
+   "mdm_stats": {
+    "acc_pairs_compared": 125984,
+    "acc_candidates": 43669,
+    "acc_det_pairs": 891,
+    "con_pairs_compared": 3336,
+    "con_candidates": 1936,
+    "con_det_pairs": 679,
+    "t_acc": 0.4524934480000411,
+    "t_con": 0.2625865090000161
+   }
+  },
+  {
+   "entities": 20000,
+   "source_records": 128037,
+   "summary": {
+    "A.Account": 13579,
+    "A.Contact": 33650,
+    "A.Opportunity": 26286,
+    "B.Account": 10305,
+    "B.Contact": 24225,
+    "B.Opportunity": 19992,
+    "entities.Account": 20000,
+    "entities.Contact": 53735,
+    "total_source_records": 128037
+   },
+   "runs": [
+    9.715838476000044,
+    9.64460711200013,
+    9.853533707999986
+   ],
+   "timings": {
+    "extract": 2.117497909000008,
+    "transform": 2.8444055130000834,
+    "validate": 0.15125431199999184,
+    "mdm": 3.997047934999955,
+    "load": 0.6056328070000063
+   },
+   "total": 9.715838476000044,
+   "throughput": 13178.172971511987,
+   "golden_acc": 19847,
+   "golden_con": 53157,
+   "shards": 45,
+   "load": {
+    "Account": [
+     19847,
+     0
+    ],
+    "Contact": [
+     53157,
+     0
+    ],
+    "Opportunity": [
+     45370,
+     0
+    ]
+   },
+   "reconcile": {
+    "Account": {
+     "source": 23884,
+     "represented": 23750,
+     "quarantined": 207,
+     "unaccounted": 0
+    },
+    "Contact": {
+     "source": 57875,
+     "represented": 56309,
+     "quarantined": 1566,
+     "unaccounted": 0
+    },
+    "Opportunity": {
+     "source": 46278,
+     "represented": 45370,
+     "quarantined": 908,
+     "unaccounted": 0
+    },
+    "fk_orphans_in_target": 0,
+    "opportunity_amount_checksum_match": true
+   },
+   "mdm_stats": {
+    "acc_pairs_compared": 2001702,
+    "acc_candidates": 627971,
+    "acc_det_pairs": 3624,
+    "con_pairs_compared": 13578,
+    "con_candidates": 7880,
+    "con_det_pairs": 2769,
+    "t_acc": 2.748049796999908,
+    "t_con": 1.2466820290001124
+   }
+  },
+  {
+   "entities": 60000,
+   "source_records": 383973,
+   "summary": {
+    "A.Account": 40447,
+    "A.Contact": 100184,
+    "A.Opportunity": 78415,
+    "B.Account": 31281,
+    "B.Contact": 72881,
+    "B.Opportunity": 60765,
+    "entities.Account": 60000,
+    "entities.Contact": 160645,
+    "total_source_records": 383973
+   },
+   "runs": [
+    37.92510336800001,
+    39.07292686100004,
+    39.92208739199998
+   ],
+   "timings": {
+    "extract": 5.817731797999954,
+    "transform": 11.000981398000022,
+    "validate": 0.34412820700003977,
+    "mdm": 20.22695825300002,
+    "load": 1.6831272050000052
+   },
+   "total": 39.07292686100004,
+   "throughput": 9827.085679195841,
+   "golden_acc": 59571,
+   "golden_con": 158894,
+   "shards": 45,
+   "load": {
+    "Account": [
+     59571,
+     0
+    ],
+    "Contact": [
+     158894,
+     0
+    ],
+    "Opportunity": [
+     136383,
+     0
+    ]
+   },
+   "reconcile": {
+    "Account": {
+     "source": 71728,
+     "represented": 71249,
+     "quarantined": 705,
+     "unaccounted": 0
+    },
+    "Contact": {
+     "source": 173065,
+     "represented": 168343,
+     "quarantined": 4722,
+     "unaccounted": 0
+    },
+    "Opportunity": {
+     "source": 139180,
+     "represented": 136383,
+     "quarantined": 2797,
+     "unaccounted": 0
+    },
+    "fk_orphans_in_target": 0,
+    "opportunity_amount_checksum_match": true
+   },
+   "mdm_stats": {
+    "acc_pairs_compared": 18910752,
+    "acc_candidates": 5515382,
+    "acc_det_pairs": 10749,
+    "con_pairs_compared": 40509,
+    "con_candidates": 23420,
+    "con_det_pairs": 8324,
+    "t_acc": 17.01353567700005,
+    "t_con": 3.205303087999937
+   }
+  }
+ ],
+ "quality_summary": {
+  "A.Account": 6872,
+  "A.Contact": 17089,
+  "A.Opportunity": 13267,
+  "B.Account": 5185,
+  "B.Contact": 12057,
+  "B.Opportunity": 9952,
+  "entities.Account": 10000,
+  "entities.Contact": 27033,
+  "total_source_records": 64422
+ },
+ "mdm": {
+  "Account.precision": [
+   0.906494355278117,
+   0.014698614329220814
+  ],
+  "Account.recall": [
+   0.9306477903026632,
+   0.008344287567104331
+  ],
+  "Account.f1": [
+   0.9183843633204543,
+   0.010614966776031642
+  ],
+  "Account.deterministic.precision": [
+   0.9023474553005671,
+   0.015124349571890272
+  ],
+  "Account.deterministic.recall": [
+   0.8501116383796278,
+   0.01149816445444205
+  ],
+  "Account.deterministic.f1": [
+   0.8754019879772499,
+   0.011020876911866723
+  ],
+  "Account.fuzzy.precision": [
+   0.9994896102722648,
+   0.0006989060497421081
+  ],
+  "Account.fuzzy.recall": [
+   0.7694300079446448,
+   0.010457206280775304
+  ],
+  "Account.fuzzy.f1": [
+   0.8694666315756796,
+   0.006599359500023993
+  ],
+  "Account.hybrid.precision": [
+   0.906494355278117,
+   0.014698614329220814
+  ],
+  "Account.hybrid.recall": [
+   0.9306477903026632,
+   0.008344287567104331
+  ],
+  "Account.hybrid.f1": [
+   0.9183843633204543,
+   0.010614966776031642
+  ],
+  "Account.sweep.0.7.precision": [
+   0.4902526537577354,
+   0.13946405238183568
+  ],
+  "Account.sweep.0.7.recall": [
+   0.9872579699645563,
+   0.0006557312728935586
+  ],
+  "Account.sweep.0.7.f1": [
+   0.6459874720605057,
+   0.12120312118438505
+  ],
+  "Account.sweep.0.75.precision": [
+   0.8780851261725271,
+   0.016267761841989112
+  ],
+  "Account.sweep.0.75.recall": [
+   0.98599011141464,
+   0.0003378708894377301
+  ],
+  "Account.sweep.0.75.f1": [
+   0.9288521599542888,
+   0.009211769780899236
+  ],
+  "Account.sweep.0.8.precision": [
+   0.908597118296647,
+   0.01474169173786625
+  ],
+  "Account.sweep.0.8.recall": [
+   0.9702517488363316,
+   0.0034614735139830897
+  ],
+  "Account.sweep.0.8.f1": [
+   0.938377105761744,
+   0.009042019558302888
+  ],
+  "Account.sweep.0.85.precision": [
+   0.906494355278117,
+   0.014698614329220814
+  ],
+  "Account.sweep.0.85.recall": [
+   0.9306477903026632,
+   0.008344287567104331
+  ],
+  "Account.sweep.0.85.f1": [
+   0.9183843633204543,
+   0.010614966776031642
+  ],
+  "Account.sweep.0.9.precision": [
+   0.9070545227769803,
+   0.014562357883075838
+  ],
+  "Account.sweep.0.9.recall": [
+   0.9301625718859826,
+   0.008553958682552846
+  ],
+  "Account.sweep.0.9.f1": [
+   0.9184375804163613,
+   0.010721701560441053
+  ],
+  "Account.sweep.0.95.precision": [
+   0.9066831294290661,
+   0.014517978094270715
+  ],
+  "Account.sweep.0.95.recall": [
+   0.9241633204602884,
+   0.008002700062445951
+  ],
+  "Account.sweep.0.95.f1": [
+   0.9153113128063637,
+   0.010289546431605484
+  ],
+  "Account.true_pairs": [
+   2055.4,
+   85.79801862514076
+  ],
+  "Account.records": [
+   11873,
+   57.82300580218915
+  ],
+  "Contact.precision": [
+   0.9970569754419266,
+   0.0029842377373277633
+  ],
+  "Contact.recall": [
+   0.7956191798717369,
+   0.007131895556234891
+  ],
+  "Contact.f1": [
+   0.8850028764709196,
+   0.004332776957825359
+  ],
+  "Contact.deterministic.precision": [
+   0.9974501238954332,
+   0.002536692273835502
+  ],
+  "Contact.deterministic.recall": [
+   0.6937816672638217,
+   0.012467852943448826
+  ],
+  "Contact.deterministic.f1": [
+   0.8183018762393373,
+   0.008797991656045973
+  ],
+  "Contact.fuzzy.precision": [
+   0.9990970237723841,
+   0.0012573949184921526
+  ],
+  "Contact.fuzzy.recall": [
+   0.7532902096675653,
+   0.0044419411020486695
+  ],
+  "Contact.fuzzy.f1": [
+   0.8589473543383335,
+   0.002822976949580629
+  ],
+  "Contact.hybrid.precision": [
+   0.9970569754419266,
+   0.0029842377373277633
+  ],
+  "Contact.hybrid.recall": [
+   0.7956191798717369,
+   0.007131895556234891
+  ],
+  "Contact.hybrid.f1": [
+   0.8850028764709196,
+   0.004332776957825359
+  ],
+  "Contact.sweep.0.7.precision": [
+   0.9925800270440774,
+   0.005411722355648636
+  ],
+  "Contact.sweep.0.7.recall": [
+   0.936006821083309,
+   0.004293366847561042
+  ],
+  "Contact.sweep.0.7.f1": [
+   0.9634558981048936,
+   0.0037529145789268483
+  ],
+  "Contact.sweep.0.75.precision": [
+   0.9945027031747535,
+   0.004776390019676757
+  ],
+  "Contact.sweep.0.75.recall": [
+   0.8500760879137047,
+   0.004558886773955127
+  ],
+  "Contact.sweep.0.75.f1": [
+   0.9166208359663819,
+   0.0023495176989113903
+  ],
+  "Contact.sweep.0.8.precision": [
+   0.9962022572303856,
+   0.0034319346015882287
+  ],
+  "Contact.sweep.0.8.recall": [
+   0.7963142726131376,
+   0.006774503564055222
+  ],
+  "Contact.sweep.0.8.f1": [
+   0.8850974587962589,
+   0.004289586088176919
+  ],
+  "Contact.sweep.0.85.precision": [
+   0.9970569754419266,
+   0.0029842377373277633
+  ],
+  "Contact.sweep.0.85.recall": [
+   0.7956191798717369,
+   0.007131895556234891
+  ],
+  "Contact.sweep.0.85.f1": [
+   0.8850028764709196,
+   0.004332776957825359
+  ],
+  "Contact.sweep.0.9.precision": [
+   0.9977811956881111,
+   0.0021863031953760132
+  ],
+  "Contact.sweep.0.9.recall": [
+   0.7953257723933477,
+   0.007061044386099505
+  ],
+  "Contact.sweep.0.9.f1": [
+   0.8851072555552268,
+   0.004195303243158741
+  ],
+  "Contact.sweep.0.95.precision": [
+   0.9977677509008108,
+   0.0022001240131453706
+  ],
+  "Contact.sweep.0.95.recall": [
+   0.7909325411341822,
+   0.006307957354048273
+  ],
+  "Contact.sweep.0.95.f1": [
+   0.8823778899839204,
+   0.003794957517635333
+  ],
+  "Contact.true_pairs": [
+   2015.4,
+   57.72607729614061
+  ],
+  "Contact.records": [
+   27975.2,
+   239.6365998757285
+  ]
+ },
+ "validation": {
+  "per_defect": {
+   "invalid_email": {
+    "injected": 1390,
+    "detected": 1390,
+    "recall": 1.0
+   },
+   "missing_required": {
+    "injected": 966,
+    "detected": 961,
+    "recall": 0.994824016563147
+   },
+   "negative_amount": {
+    "injected": 615,
+    "detected": 615,
+    "recall": 1.0
+   },
+   "orphan_reference": {
+    "injected": 1280,
+    "detected": 1280,
+    "recall": 1.0
+   },
+   "revenue_unit_error": {
+    "injected": 174,
+    "detected": 174,
+    "recall": 1.0
+   },
+   "swapped_names": {
+    "injected": 755,
+    "detected": 17,
+    "recall": 0.022516556291390728
+   },
+   "unmapped_picklist": {
+    "injected": 366,
+    "detected": 366,
+    "recall": 1.0
+   },
+   "unparseable_date": {
+    "injected": 412,
+    "detected": 412,
+    "recall": 1.0
+   }
+  },
+  "cascade": 1698,
+  "fp": 0,
+  "clean": 313702,
+  "injected_records": 5904,
+  "detected_records": 5166,
+  "records": 319606
+ },
+ "gate": {
+  "with_gate_load_errors": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "no_gate_load_errors": [
+   1104,
+   1039,
+   1016,
+   1017,
+   985
+  ],
+  "no_gate_by_object": [
+   {
+    "Account": [
+     9922,
+     47
+    ],
+    "Contact": [
+     26739,
+     704
+    ],
+    "Opportunity": [
+     22866,
+     353
+    ]
+   },
+   {
+    "Account": [
+     9943,
+     37
+    ],
+    "Contact": [
+     26478,
+     673
+    ],
+    "Opportunity": [
+     22884,
+     329
+    ]
+   },
+   {
+    "Account": [
+     9933,
+     41
+    ],
+    "Contact": [
+     26388,
+     624
+    ],
+    "Opportunity": [
+     22852,
+     351
+    ]
+   },
+   {
+    "Account": [
+     9961,
+     36
+    ],
+    "Contact": [
+     26158,
+     658
+    ],
+    "Opportunity": [
+     23027,
+     323
+    ]
+   },
+   {
+    "Account": [
+     9977,
+     32
+    ],
+    "Contact": [
+     26502,
+     625
+    ],
+    "Opportunity": [
+     22691,
+     328
+    ]
+   }
+  ],
+  "with_gate_fk": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "no_gate_fk": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "reconcile": [
+   {
+    "Account": {
+     "source": 12057,
+     "represented": 11971,
+     "quarantined": 127,
+     "unaccounted": 0
+    },
+    "Contact": {
+     "source": 29146,
+     "represented": 28322,
+     "quarantined": 824,
+     "unaccounted": 0
+    },
+    "Opportunity": {
+     "source": 23219,
+     "represented": 22743,
+     "quarantined": 476,
+     "unaccounted": 0
+    },
+    "fk_orphans_in_target": 0,
+    "opportunity_amount_checksum_match": true
+   },
+   {
+    "Account": {
+     "source": 11914,
+     "represented": 11846,
+     "quarantined": 98,
+     "unaccounted": 0
+    },
+    "Contact": {
+     "source": 28843,
+     "represented": 28062,
+     "quarantined": 781,
+     "unaccounted": 0
+    },
+    "Opportunity": {
+     "source": 23213,
+     "represented": 22778,
+     "quarantined": 435,
+     "unaccounted": 0
+    },
+    "fk_orphans_in_target": 0,
+    "opportunity_amount_checksum_match": true
+   },
+   {
+    "Account": {
+     "source": 11924,
+     "represented": 11839,
+     "quarantined": 121,
+     "unaccounted": 0
+    },
+    "Contact": {
+     "source": 28611,
+     "represented": 27845,
+     "quarantined": 766,
+     "unaccounted": 0
+    },
+    "Opportunity": {
+     "source": 23203,
+     "represented": 22716,
+     "quarantined": 487,
+     "unaccounted": 0
+    },
+    "fk_orphans_in_target": 0,
+    "opportunity_amount_checksum_match": true
+   },
+   {
+    "Account": {
+     "source": 11961,
+     "represented": 11879,
+     "quarantined": 119,
+     "unaccounted": 0
+    },
+    "Contact": {
+     "source": 28490,
+     "represented": 27684,
+     "quarantined": 806,
+     "unaccounted": 0
+    },
+    "Opportunity": {
+     "source": 23350,
+     "represented": 22885,
+     "quarantined": 465,
+     "unaccounted": 0
+    },
+    "fk_orphans_in_target": 0,
+    "opportunity_amount_checksum_match": true
+   },
+   {
+    "Account": {
+     "source": 11911,
+     "represented": 11830,
+     "quarantined": 107,
+     "unaccounted": 0
+    },
+    "Contact": {
+     "source": 28745,
+     "represented": 27963,
+     "quarantined": 782,
+     "unaccounted": 0
+    },
+    "Opportunity": {
+     "source": 23019,
+     "represented": 22549,
+     "quarantined": 470,
+     "unaccounted": 0
+    },
+    "fk_orphans_in_target": 0,
+    "opportunity_amount_checksum_match": true
+   }
+  ]
+ },
+ "blocking": {
+  "blocking": {
+   "pairs_compared": 22327,
+   "seconds": 0.20243166899990683,
+   "quality": {
+    "precision": 0.9022556390977443,
+    "recall": 0.9183673469387755,
+    "f1": 0.9102402022756005,
+    "true_pairs": 392,
+    "predicted_pairs": 399,
+    "tp": 360,
+    "records": 2353,
+    "true_entities": 1985,
+    "predicted_clusters": 1983
+   }
+  },
+  "no_blocking": {
+   "pairs_compared": 2767128,
+   "seconds": 0.19193056900007832,
+   "quality": {
+    "precision": 0.9025,
+    "recall": 0.9209183673469388,
+    "f1": 0.9116161616161615,
+    "true_pairs": 392,
+    "predicted_pairs": 400,
+    "tp": 361,
+    "records": 2353,
+    "true_entities": 1985,
+    "predicted_clusters": 1982
+   }
+  }
+ },
+ "cdc": {
+  "summary": {
+   "A.Account": 13579,
+   "A.Contact": 33650,
+   "A.Opportunity": 26286,
+   "B.Account": 10305,
+   "B.Contact": 24225,
+   "B.Opportunity": 19992,
+   "entities.Account": 20000,
+   "entities.Contact": 53735,
+   "total_source_records": 128037
+  },
+  "days": 5,
+  "batches": 120,
+  "schedule": "hourly micro-batches",
+  "events_delivered": 12840,
+  "duplicates_skipped": 84,
+  "applied": 12466,
+  "rejected": 184,
+  "held": 106,
+  "batch_seconds": {
+   "mean": 0.014187415600014219,
+   "median": 0.013626332999933766,
+   "p95": 0.018794102999891038,
+   "max": 0.023810769999954573
+  },
+  "events_per_batch_mean": 107,
+  "alarms": [
+   [
+    3,
+    10
+   ]
+  ],
+  "injected_anomalies": [
+   [
+    3,
+    10
+   ]
+  ],
+  "false_alarms": 0,
+  "equivalence": {
+   "contact_sources_compared": 57392,
+   "contact_field_agreement": 0.9993901589071648,
+   "account_sources_compared": 23750,
+   "account_field_agreement": 0.9935578947368421,
+   "opportunities_incremental": 46078,
+   "opportunities_full": 46078,
+   "opportunity_set_equal": true,
+   "opportunity_value_agreement": 1.0,
+   "contact_cluster_pair_precision": 0.9943502824858758,
+   "contact_cluster_pair_recall": 0.9989189189189189
+  },
+  "post_cdc_contact_quality_incremental": {
+   "precision": 0.9938122141511972,
+   "recall": 0.8106210226025894,
+   "f1": 0.8929175731206187,
+   "true_pairs": 4557,
+   "predicted_pairs": 3717,
+   "tp": 3694,
+   "records": 57392,
+   "true_entities": 53056,
+   "predicted_clusters": 53830
+  },
+  "post_cdc_contact_quality_full_rebuild": {
+   "precision": 0.9937837837837837,
+   "recall": 0.8068904981347378,
+   "f1": 0.8906382463364417,
+   "true_pairs": 4557,
+   "predicted_pairs": 3700,
+   "tp": 3677,
+   "records": 57392,
+   "true_entities": 53056,
+   "predicted_clusters": 53848
+  },
+  "full_rebuild_seconds": 10.448684289000084
+ },
+ "cdc_extra": {
+  "alarm_batch": [
+   {
+    "events": 107,
+    "duplicates_skipped": 1,
+    "applied": 0,
+    "rejected": 0,
+    "held": 106,
+    "alarm": true,
+    "null_rate": 1.0,
+    "seconds": 0.00028543899998112465,
+    "day": 3,
+    "hour": 10,
+    "injected_anomaly": true
+   }
+  ],
+  "max_normal_null": 0.07692307692307693,
+  "mean_normal_null": 0.006948655651247653
+ }
+}

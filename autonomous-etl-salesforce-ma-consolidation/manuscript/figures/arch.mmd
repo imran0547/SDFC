@@ -1,0 +1,28 @@
+flowchart LR
+  subgraph SRC[Source orgs]
+    A[(Org A<br/>acquirer)]
+    B[(Org B<br/>acquired)]
+  end
+  subgraph ORCH[Orchestration layer - Jitterbit operations / reference prototype]
+    E[1 Partitioned<br/>bulk extraction]
+    C[1b CDC<br/>event intake]
+    T[2 Template-driven<br/>transformation]
+    V[3 Quality gates<br/>rules + profiling]
+    M[4 MDM<br/>match, cluster,<br/>survivorship]
+    L[5 Constrained load<br/>per-record results]
+  end
+  Q[(Quarantine<br/>+ audit log)]
+  X[(Crosswalk<br/>lineage)]
+  TG[(Target org)]
+  MON[6 Monitoring:<br/>data-health profile,<br/>circuit breaker]
+  A --> E
+  B --> E
+  A -. change events .-> C
+  B -. change events .-> C
+  E --> T --> V --> M --> L --> TG
+  C --> T
+  V --> Q
+  M --> X
+  L --> Q
+  C --> MON
+  MON -. hold batch .-> Q
