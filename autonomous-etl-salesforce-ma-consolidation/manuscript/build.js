@@ -96,7 +96,8 @@ while (i < src.length) {
   } else if (line.startsWith("AUTHORS: ")) {
     children.push(para(line.slice(9), { align: AlignmentType.CENTER, run: { bold: true } }));
   } else if (line.startsWith("AFFIL: ")) {
-    children.push(para(line.slice(7), { align: AlignmentType.CENTER, spacing: { after: 360 }, run: { size: 20 } }));
+    const last = !(src[i + 1] || "").startsWith("AFFIL: ");
+    children.push(para(line.slice(7), { align: AlignmentType.CENTER, spacing: { after: last ? 360 : 40 }, run: { size: 20 } }));
   } else if (line.startsWith("ABSTRACT: ")) {
     children.push(new Paragraph({ children: [new TextRun({ text: "Abstract", bold: true, font: FONT, size: 24 })], spacing: { after: 100 } }));
     children.push(para(line.slice(10), { indent: { left: 360, right: 360 } }));
@@ -133,7 +134,7 @@ while (i < src.length) {
 }
 
 const doc = new Document({
-  creator: "[Author name(s)]",
+  creator: "Imran Basha Shaik, Ramya Chikkla, Prathyusha Pochampally",
   title: "Autonomous ETL Pipelines for Salesforce M&A Consolidation",
   styles: {
     default: { document: { run: { font: FONT, size: BODY } } },

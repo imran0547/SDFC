@@ -1,8 +1,11 @@
 TITLE: Autonomous ETL Pipelines for Salesforce M&A Consolidation: A Reference Framework, Jitterbit Mapping and Reproducible Simulation Study
 
-AUTHORS: [Author name(s)]
+AUTHORS: Imran Basha Shaik*, Ramya Chikkla, Prathyusha Pochampally
 
-AFFIL: [Affiliation, city, country] · [corresponding author e-mail] · [ORCID]
+AFFIL: Imran Basha Shaik, Frisco, TX, USA · ORCID 0009-0002-1210-5646 · [e-mail]
+AFFIL: Ramya Chikkla · Ramya.Chikkla@yahoo.com
+AFFIL: Prathyusha Pochampally · Prathyusha.Pochampally11@hotmail.com
+AFFIL: *Corresponding author
 
 ABSTRACT: Consolidating the Salesforce organisations of merging companies requires reconciling divergent schemas and picklists, resolving duplicate customers across and within organisations, preserving referential integrity, and keeping the target synchronised while the source systems remain in use. This paper proposes a reference framework for an autonomous extract-transform-load (ETL) pipeline for this task, comprising partitioned bulk extraction, declarative template-driven transformation, rule-based and statistical quality gates, master data management (MDM) with deterministic and blocked fuzzy matching, constrained loading with per-record error capture, and change data capture (CDC) with a data-health circuit breaker. Each stage is mapped to Jitterbit Integration Studio constructs. Because no production merger data were available, the framework was implemented as an open reference prototype and evaluated on a synthetic two-organisation scenario with known ground truth, generated at three scales (32,040 to 383,973 source records) and five random seeds. The hybrid matcher reached a pairwise F1 of 0.918 ± 0.011 for accounts and 0.885 ± 0.004 for contacts at a pre-set threshold; a threshold sweep showed that per-object calibration would raise these to 0.938 and 0.963. The quality gates flagged every injected structural defect class except one masked case, with no false positives among 313,702 clean records, and removing them produced 1,032 ± 45 load failures per run plus silently nulled picklist values. Over five simulated days of hourly CDC, duplicate deliveries were discarded, an injected upstream fault was held in the batch in which it occurred with no false alarms, and the incremental target agreed with a full rebuild on 99.94% of contact and 99.36% of account field values. The results characterise the design under controlled conditions; validation on a real Jitterbit deployment remains future work.
 
