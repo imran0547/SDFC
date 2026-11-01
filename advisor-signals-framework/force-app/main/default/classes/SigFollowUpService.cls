@@ -3,6 +3,62 @@
  * The Task description repeats only what the card showed and never adds personal details.
  */
 public with sharing class SigFollowUpService {
+    /** A signal to follow up on, and the record the follow-up relates to. */
+    public class Resolved {
+        public SigInsight insight;
+        public Id whatId;
+    }
+
+    /**
+     * Finds the signal behind a response key. After the advisor acted, the live signal is
+     * usually gone (an Opportunity now exists), so the stored response is used first; before
+     * that, the live signal is used.
+     */
+    public static Resolved resolve(Id recordId, String responseKey) {
+        if (String.isBlank(responseKey)) {
+            return null;
+        }
+        Id userId = UserInfo.getUserId();
+        List<Signal_Response__c> rows = [
+            SELECT Signal_Key__c, Change_Type__c, Prompt__c, Client__c, Opportunity__c, Created_Record_Id__c, Evidence_Date__c, Response_Key__c
+            FROM Signal_Response__c
+            WHERE Response_Key__c = :responseKey AND Responded_By__c = :userId
+            WITH USER_MODE
+            LIMIT 1
+        ];
+        Resolved result = new Resolved();
+        if (!rows.isEmpty()) {
+            Signal_Response__c r = rows[0];
+            SigInsight ins = new SigInsight();
+            ins.responseKey = r.Response_Key__c;
+            ins.signalKey = r.Signal_Key__c;
+            ins.changeType = r.Change_Type__c;
+            ins.prompt = r.Prompt__c;
+            ins.clientId = r.Client__c;
+            ins.opportunityId = r.Opportunity__c;
+            ins.evidenceDate = r.Evidence_Date__c;
+            Signal_Definition__mdt def = SigConfig.definition(r.Signal_Key__c);
+            ins.allowTask = def != null && def.Allow_Task__c == true;
+            Id created = SigResponseService.toId(r.Created_Record_Id__c);
+            result.whatId = created != null ? created : (r.Opportunity__c != null ? r.Opportunity__c : r.Client__c);
+            if (result.whatId != null && result.whatId.getSObjectType() == Opportunity.SObjectType) {
+                for (Opportunity o : [SELECT Name FROM Opportunity WHERE Id = :result.whatId WITH USER_MODE LIMIT 1]) {
+                    ins.suggestedValues.put('Name', o.Name);
+                }
+            }
+            result.insight = ins;
+            return result;
+        }
+        SigInsight live = SigEngine.findInsight(recordId, responseKey);
+        if (live == null) {
+            return null;
+        }
+        result.insight = live;
+        Id opportunityId = SigResponseService.toId(live.opportunityId);
+        result.whatId = opportunityId != null ? opportunityId : SigResponseService.toId(live.clientId);
+        return result;
+    }
+
     public static Map<String, Object> taskDefaults(SigInsight ins, Id whatId) {
         Map<String, Object> values = new Map<String, Object>();
         Signal_Definition__mdt def = ins == null ? null : SigConfig.definition(ins.signalKey);

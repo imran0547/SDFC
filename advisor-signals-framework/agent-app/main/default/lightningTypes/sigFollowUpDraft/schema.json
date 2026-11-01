@@ -1,0 +1,5 @@
+{
+  "title": "Signal Follow-up Draft",
+  "description": "Output of the Create Follow-up agent action, rendered as a pre-filled Task card.",
+  "lightning:type": "@apexClassType/c__SigCreateFollowUpAction$Response"
+}

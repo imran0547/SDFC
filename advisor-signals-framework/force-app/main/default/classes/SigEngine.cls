@@ -44,6 +44,19 @@ public with sharing class SigEngine {
         return false;
     }
 
+    /** The live insight with this response key, ignoring earlier responses; null if it no longer applies. */
+    public static SigInsight findInsight(Id recordId, String responseKey) {
+        if (recordId == null || String.isBlank(responseKey)) {
+            return null;
+        }
+        for (SigInsight ins : evaluateRaw(recordId, null, SURFACE_AGENT, true, new Map<String, Signal_Definition__mdt>())) {
+            if (ins.responseKey == responseKey) {
+                return ins;
+            }
+        }
+        return null;
+    }
+
     @TestVisible
     static List<SigInsight> evaluateRaw(
         Id recordId,
