@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Named, typed values a signal source reads. Rows with the same Rule Key form one rule; blank scope fields match everything.</description>
+    <label>Signal Parameter</label>
+    <pluralLabel>Signal Parameters</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

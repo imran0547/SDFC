@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Allow_Task__c</fullName>
+    <description>Offer a follow-up Task after the primary action.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Allow Task</label>
+    <defaultValue>true</defaultValue>
+    <type>Checkbox</type>
+</CustomField>

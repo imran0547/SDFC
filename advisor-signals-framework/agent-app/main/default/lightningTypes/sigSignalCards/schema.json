@@ -1,0 +1,5 @@
+{
+  "title": "Signal Cards",
+  "description": "Output of the Show Signals agent action, rendered as signal cards.",
+  "lightning:type": "@apexClassType/c__SigAgentAction$Response"
+}

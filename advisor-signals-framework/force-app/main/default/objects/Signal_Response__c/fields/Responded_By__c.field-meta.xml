@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Responded_By__c</fullName>
+    <description>The advisor who responded.</description>
+    <label>Responded By</label>
+    <referenceTo>User</referenceTo>
+    <relationshipLabel>Signal Responses</relationshipLabel>
+    <relationshipName>Signal_Responses</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

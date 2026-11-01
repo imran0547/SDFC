@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client__c</fullName>
+    <description>Client the signal is about.</description>
+    <label>Client</label>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Signal Responses</relationshipLabel>
+    <relationshipName>Signal_Responses</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

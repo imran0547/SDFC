@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Action__c</fullName>
+    <description>What the primary button opens.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Primary Action</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Draft Opportunity</fullName>
+                <default>false</default>
+                <label>Draft Opportunity</label>
+            </value>
+            <value>
+                <fullName>Update Opportunity</fullName>
+                <default>false</default>
+                <label>Update Opportunity</label>
+            </value>
+            <value>
+                <fullName>Create Task</fullName>
+                <default>false</default>
+                <label>Create Task</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

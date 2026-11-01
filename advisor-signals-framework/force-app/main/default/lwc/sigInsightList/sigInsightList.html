@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title={cardTitle} icon-name="standard:insights">
+        <lightning-button-icon
+            slot="actions"
+            icon-name="utility:refresh"
+            alternative-text="Show signals"
+            title="Show signals, including skipped ones"
+            onclick={handleRefresh}
+        ></lightning-button-icon>
+        <div class="slds-p-horizontal_small">
+            <template lwc:if={loading}>
+                <lightning-spinner alternative-text="Checking signals" size="small"></lightning-spinner>
+            </template>
+            <template lwc:if={loadError}>
+                <div class="slds-text-color_error slds-m-bottom_small" role="alert">{loadError}</div>
+                <lightning-button label="Try again" onclick={handleRefresh}></lightning-button>
+            </template>
+            <template lwc:if={isEmpty}>
+                <p class="slds-text-color_weak">No signals for this record right now.</p>
+            </template>
+            <template lwc:if={hasItems}>
+                <template for:each={items} for:item="item">
+                    <c-sig-insight-card
+                        key={item.key}
+                        insight={item.insight}
+                        state={item.state}
+                        message={item.message}
+                        error-message={item.error}
+                        onprimary={handlePrimary}
+                        onsecondary={handleSecondary}
+                        oncreatetask={handleCreateTask}
+                        ondone={handleDone}
+                    ></c-sig-insight-card>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>
