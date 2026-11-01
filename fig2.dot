@@ -1,0 +1,17 @@
+digraph G { rankdir=TB; bgcolor="white"; nodesep=0.45; ranksep=0.42;
+node [shape=box style="rounded,filled" fillcolor="#f7f7f5" color="#52514e" fontname="DejaVu Sans" fontsize=10 width=1.9];
+edge [fontname="DejaVu Sans" fontsize=8.5 fontcolor="#52514e" color="#2a78d6" penwidth=1.3 arrowsize=0.7];
+LS [label="Lead Submitted\n[init, exactly one]" fillcolor="#eef4fc" color="#2a78d6"];
+LR [label="Lead Registered in CRM"]; PQ [label="Lead Pre-qualified"]; CD [label="Complete Lead Data"];
+OF [label="Opportunity Finalized"]; PC [label="Proposal Created"]; PS [label="Proposal Sent"];
+FU [label="Follow-up Call (Proposal)"]; PR [label="Proposal Returned"]; VO [label="Validate Opportunity"];
+MI [label="Follow-up Call\n(Missing Info)"];
+WON [label="Deal Won ⇔ Approved ⇔ Registered\n[coexistence]" fillcolor="#eef4fc" color="#2a78d6"];
+LD [label="Lead Declined" fillcolor="#fdf0ea" color="#eb6834"];
+LS->LR [label=" chain succession"]; PQ->CD [label=" succession"];
+OF->PC [label=" succession"]; PC->PS [label=" chain succession"]; PS->FU [label=" precedence"];
+PR->VO [label=" succession +\n alt. response"]; VO->MI [label=" precedence"];
+LR->WON [style=invis]; CD->LD [style=invis];
+WON->LD [dir=none style=dashed color="#eb6834" label=" not co-existence " fontcolor="#eb6834" constraint=false];
+{rank=same; LS; PQ; OF; PR;}
+}

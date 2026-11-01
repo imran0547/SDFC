@@ -1,0 +1,50 @@
+template,args,train_conf,test_violation,n_viol,win_if_viol,win_if_ok
+nonsuccession,"Lead Declined , Complete Lead Data",0.968,0.0355,135,0.0,0.181
+noncoexistence,"Lead Declined , Follow-up Call (Missing Info)",0.976,0.02,76,0.0,0.178
+nonchainsuccession,"Complete Lead Data , Proposal Returned",0.958,0.02,76,0.789,0.162
+nonsuccession,"Opportunity Cancelled , Complete Lead Data",0.971,0.0189,72,0.0,0.178
+nonchainsuccession,"Handle Lead , Lead Declined",0.978,0.0181,69,0.0,0.177
+noncoexistence,"Lead Declined , Proposal Cancelled",0.982,0.0173,66,0.0,0.177
+nonsuccession,"Follow-up Call (Proposal) , Proposal Returned",0.968,0.0139,53,0.962,0.163
+nonchainsuccession,"Lead Pre-qualified , Lead Declined",0.988,0.0139,53,0.0,0.177
+nonsuccession,"Opportunity Cancelled , Follow-up Call (Proposal)",0.98,0.0131,50,0.0,0.176
+nonchainsuccession,"Lead Pre-qualified , Opportunity Cancelled",0.982,0.0123,47,0.0,0.176
+noncoexistence,"Opportunity Cancelled , Proposal Returned",0.973,0.0121,46,0.0,0.176
+noncoexistence,"Opportunity Cancelled , Validate Opportunity",0.973,0.0121,46,0.0,0.176
+noncoexistence,"Opportunity Cancelled , Follow-up Call (Missing Info)",0.967,0.0105,40,0.0,0.176
+succession,"Lead Qualified , Follow-up Call (Proposal)",0.982,0.0092,35,0.0,0.176
+altresponse,"Lead Qualified , Follow-up Call (Proposal)",0.982,0.0092,35,0.0,0.176
+altsuccession,"Lead Qualified , Opportunity Finalized",0.982,0.0092,35,0.0,0.176
+altresponse,"Lead Qualified , Offer Selected",0.982,0.0092,35,0.0,0.176
+altresponse,"Lead Qualified , Proposal Created",0.982,0.0092,35,0.0,0.176
+altresponse,"Lead Qualified , Proposal Sent",0.982,0.0092,35,0.0,0.176
+succession,"Lead Qualified , Offer Selected",0.982,0.0092,35,0.0,0.176
+succession,"Lead Qualified , Proposal Created",0.982,0.0092,35,0.0,0.176
+succession,"Lead Qualified , Proposal Sent",0.982,0.0092,35,0.0,0.176
+nonchainsuccession,"Complete Lead Data , Proposal Cancelled",0.989,0.0087,33,0.333,0.173
+absence,Fraud Review,0.991,0.0079,30,0.267,0.173
+nonchainsuccession,"Proposal Accepted , Validate Opportunity",0.979,0.0076,29,1.0,0.168
+nonchainsuccession,"Proposal Cancelled , Follow-up Call (Proposal)",0.988,0.006,23,0.0,0.175
+nonchainsuccession,"Follow-up Call (Proposal) , Proposal Accepted",0.982,0.005,19,1.0,0.17
+nonchainsuccession,"Lead Qualified , Opportunity Cancelled",0.993,0.0047,18,0.0,0.175
+nonchainsuccession,"Deal Approved , Validate Opportunity",0.973,0.0045,17,1.0,0.17
+nonchainsuccession,"Complete Lead Data , Opportunity Cancelled",0.996,0.0037,14,0.0,0.175
+nonchainsuccession,"Follow-up Call (Proposal) , Deal Approved",0.991,0.0029,11,1.0,0.172
+nonchainsuccession,"Validate Opportunity , Proposal Accepted",0.995,0.0024,9,1.0,0.172
+nonchainsuccession,"Follow-up Call (Proposal) , Deal Won",0.998,0.0018,7,1.0,0.173
+nonchainsuccession,"Follow-up Call (Proposal) , Deal Registered",0.999,0.0011,4,1.0,0.173
+nonchainsuccession,"Validate Opportunity , Deal Approved",0.997,0.0011,4,1.0,0.173
+nonchainsuccession,"Follow-up Call (Proposal) , Validate Opportunity",0.996,0.0011,4,0.0,0.174
+nonchainsuccession,"Follow-up Call (Proposal) , Proposal Cancelled",0.998,0.0005,2,0.5,0.174
+nonchainsuccession,"Validate Opportunity , Deal Won",0.999,0.0003,1,1.0,0.174
+nonchainsuccession,"Complete Lead Data , Lead Declined",1.0,0.0003,1,0.0,0.174
+nonchainsuccession,"Validate Opportunity , Deal Registered",0.999,0.0003,1,1.0,0.174
+altprecedence,"Lead Pre-qualified , Opportunity Cancelled",1.0,0.0,0,,0.174
+coexistence,"Deal Won , Proposal Accepted",0.998,0.0,0,,0.174
+coexistence,"Deal Approved , Proposal Accepted",0.998,0.0,0,,0.174
+coexistence,"Deal Registered , Proposal Accepted",0.998,0.0,0,,0.174
+nonchainsuccession,"Follow-up Call (Proposal) , Opportunity Cancelled",0.999,0.0,0,,0.174
+nonchainsuccession,"Complete Lead Data , Follow-up Call (Proposal)",1.0,0.0,0,,0.174
+nonchainsuccession,"Lead Pre-qualified , Complete Lead Data",1.0,0.0,0,,0.174
+nonchainsuccession,"Complete Lead Data , Offer Selected",1.0,0.0,0,,0.174
+nonchainsuccession,"Lead Registered in CRM , Handle Lead",1.0,0.0,0,,0.174

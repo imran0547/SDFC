@@ -1,0 +1,12 @@
+digraph G { rankdir=LR; bgcolor="white"; nodesep=0.35; ranksep=0.35;
+node [shape=box style="rounded,filled" fillcolor="#eef4fc" color="#2a78d6" fontname="DejaVu Sans" fontsize=11 penwidth=1.4];
+edge [color="#52514e" penwidth=1.2 arrowsize=0.7];
+a [label="1. Event-log\nextraction\n(CRM objects → XES)"];
+b [label="2. Preprocessing\n(lifecycle filter,\nlabel mapping, split)"];
+c [label="3. Declarative\ndiscovery\n(Declare templates)"];
+d [label="4. Model refinement\nR1–R4 (negatives,\nsubsumption, transitivity,\nvacuity)"];
+e [label="5. Conformance &\nvalidation\n(held-out test log)"];
+f [label="6. Deployment\nhard rules → enforce\nsoft rules → monitor"];
+a->b->c->d->e->f;
+f->c [style=dashed label=" periodic re-mining " fontsize=9 fontcolor="#52514e" constraint=false];
+}

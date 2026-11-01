@@ -1,0 +1,5021 @@
+{
+ "data": {
+  "raw_events": 262200,
+  "complete_events": 164506,
+  "cases": 13087,
+  "closed_cases": 12688,
+  "train_cases": 8881,
+  "test_cases": 3807,
+  "train_events": 112709,
+  "test_events": 44253,
+  "activities": 23,
+  "resources": 68,
+  "outcomes": {
+   "declined": 7635,
+   "cancelled": 2807,
+   "won": 2246,
+   "open": 399
+  },
+  "variants_closed": 4040,
+  "period": [
+   "2011-09-30",
+   "2012-03-14"
+  ]
+ },
+ "discovery_seconds": 17.4,
+ "raw_constraints": 1310,
+ "raw_by_template": {
+  "precedence": 131,
+  "response": 16,
+  "responded_existence": 174,
+  "altprecedence": 67,
+  "altresponse": 16,
+  "chainresponse": 2,
+  "existence": 2,
+  "exactly_one": 2,
+  "chainprecedence": 2,
+  "init": 1,
+  "absence": 1,
+  "succession": 14,
+  "altsuccession": 5,
+  "chainsuccession": 2,
+  "coexistence": 48,
+  "noncoexistence": 82,
+  "nonsuccession": 276,
+  "nonchainsuccession": 469
+ },
+ "refinement": [
+  {
+   "step": "Raw discovery (support>=0.10, confidence>=0.95)",
+   "constraints": 1310
+  },
+  {
+   "step": "R1: remove trivial negative constraints",
+   "constraints": 1093
+  },
+  {
+   "step": "R2: remove subsumed (implied) constraints",
+   "constraints": 668
+  },
+  {
+   "step": "R3: remove transitively redundant constraints",
+   "constraints": 485
+  },
+  {
+   "step": "R4: remove vacuous negative ordering constraints",
+   "constraints": 429
+  }
+ ],
+ "refined_by_template": {
+  "precedence": 7,
+  "responded_existence": 3,
+  "altprecedence": 62,
+  "altresponse": 11,
+  "exactly_one": 2,
+  "init": 1,
+  "absence": 1,
+  "succession": 9,
+  "altsuccession": 3,
+  "chainsuccession": 2,
+  "coexistence": 10,
+  "noncoexistence": 14,
+  "nonsuccession": 151,
+  "nonchainsuccession": 153
+ },
+ "hard_constraints": 380,
+ "soft_constraints": 49,
+ "refined_list": [
+  {
+   "template": "absence",
+   "args": [
+    "Fraud Review"
+   ],
+   "support": 8881,
+   "confidence": 8804,
+   "conf_ratio": 0.9913,
+   "kind": "soft"
+  },
+  {
+   "template": "chainsuccession",
+   "args": [
+    "Lead Submitted",
+    "Lead Registered in CRM"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "exactly_one",
+   "args": [
+    "Lead Registered in CRM"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "exactly_one",
+   "args": [
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "init",
+   "args": [
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Registered in CRM",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Registered in CRM",
+    "Lead Qualified"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Registered in CRM",
+    "Complete Lead Data"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Registered in CRM",
+    "Deal Registered"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Registered in CRM",
+    "Proposal Created"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Registered in CRM",
+    "Opportunity Cancelled"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Registered in CRM",
+    "Deal Approved"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Registered in CRM",
+    "Offer Selected"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Registered in CRM",
+    "Proposal Sent"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Registered in CRM",
+    "Proposal Cancelled"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Registered in CRM",
+    "Proposal Returned"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Registered in CRM",
+    "Deal Won"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Registered in CRM",
+    "Follow-up Call (Missing Info)"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Registered in CRM",
+    "Validate Opportunity"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Registered in CRM",
+    "Opportunity Finalized"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Registered in CRM",
+    "Proposal Accepted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Submitted",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Submitted",
+    "Lead Qualified"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Submitted",
+    "Complete Lead Data"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Submitted",
+    "Deal Registered"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Submitted",
+    "Proposal Created"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Submitted",
+    "Opportunity Cancelled"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Submitted",
+    "Deal Approved"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Submitted",
+    "Offer Selected"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Submitted",
+    "Lead Pre-qualified"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Submitted",
+    "Lead Declined"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Submitted",
+    "Proposal Sent"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Submitted",
+    "Proposal Cancelled"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Submitted",
+    "Proposal Returned"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Submitted",
+    "Handle Lead"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Submitted",
+    "Deal Won"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Submitted",
+    "Follow-up Call (Missing Info)"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Submitted",
+    "Validate Opportunity"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Submitted",
+    "Opportunity Finalized"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Submitted",
+    "Proposal Accepted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Registered in CRM",
+    "Handle Lead"
+   ],
+   "support": 8881,
+   "confidence": 8877,
+   "conf_ratio": 0.9995,
+   "kind": "soft"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Lead Registered in CRM"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Lead Qualified",
+    "Lead Registered in CRM"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Lead Qualified",
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Complete Lead Data",
+    "Lead Registered in CRM"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Complete Lead Data",
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Lead Registered in CRM",
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Registered",
+    "Lead Registered in CRM"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Registered",
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Created",
+    "Lead Registered in CRM"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Created",
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Opportunity Cancelled",
+    "Lead Registered in CRM"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Opportunity Cancelled",
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Approved",
+    "Lead Registered in CRM"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Approved",
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Offer Selected",
+    "Lead Registered in CRM"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Offer Selected",
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Lead Pre-qualified",
+    "Lead Registered in CRM"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Lead Pre-qualified",
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Lead Declined",
+    "Lead Registered in CRM"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Lead Declined",
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Sent",
+    "Lead Registered in CRM"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Sent",
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Cancelled",
+    "Lead Registered in CRM"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Cancelled",
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Returned",
+    "Lead Registered in CRM"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Returned",
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Handle Lead",
+    "Lead Registered in CRM"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Handle Lead",
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Won",
+    "Lead Registered in CRM"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Won",
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Missing Info)",
+    "Lead Registered in CRM"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Missing Info)",
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Validate Opportunity",
+    "Lead Registered in CRM"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Validate Opportunity",
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Opportunity Finalized",
+    "Lead Registered in CRM"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Opportunity Finalized",
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Accepted",
+    "Lead Registered in CRM"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Accepted",
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "responded_existence",
+   "args": [
+    "Lead Registered in CRM",
+    "Lead Submitted"
+   ],
+   "support": 8881,
+   "confidence": 8881,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Complete Lead Data",
+    "Lead Declined"
+   ],
+   "support": 8880,
+   "confidence": 8878,
+   "conf_ratio": 0.9998,
+   "kind": "soft"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Pre-qualified",
+    "Lead Declined"
+   ],
+   "support": 8880,
+   "confidence": 8773,
+   "conf_ratio": 0.988,
+   "kind": "soft"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Lead Declined",
+    "Lead Pre-qualified"
+   ],
+   "support": 8880,
+   "confidence": 8880,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Lead Declined",
+    "Complete Lead Data"
+   ],
+   "support": 8880,
+   "confidence": 8592,
+   "conf_ratio": 0.9676,
+   "kind": "soft"
+  },
+  {
+   "template": "noncoexistence",
+   "args": [
+    "Opportunity Cancelled",
+    "Lead Declined"
+   ],
+   "support": 7298,
+   "confidence": 7298,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "noncoexistence",
+   "args": [
+    "Lead Declined",
+    "Proposal Cancelled"
+   ],
+   "support": 6977,
+   "confidence": 6848,
+   "conf_ratio": 0.9815,
+   "kind": "soft"
+  },
+  {
+   "template": "noncoexistence",
+   "args": [
+    "Deal Registered",
+    "Lead Declined"
+   ],
+   "support": 6845,
+   "confidence": 6845,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "noncoexistence",
+   "args": [
+    "Deal Approved",
+    "Lead Declined"
+   ],
+   "support": 6845,
+   "confidence": 6845,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "noncoexistence",
+   "args": [
+    "Lead Declined",
+    "Deal Won"
+   ],
+   "support": 6845,
+   "confidence": 6845,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "noncoexistence",
+   "args": [
+    "Lead Declined",
+    "Proposal Accepted"
+   ],
+   "support": 6842,
+   "confidence": 6842,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Handle Lead",
+    "Complete Lead Data"
+   ],
+   "support": 6533,
+   "confidence": 6533,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Complete Lead Data",
+    "Handle Lead"
+   ],
+   "support": 6533,
+   "confidence": 6533,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Handle Lead",
+    "Lead Pre-qualified"
+   ],
+   "support": 6533,
+   "confidence": 6533,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Handle Lead",
+    "Lead Declined"
+   ],
+   "support": 6293,
+   "confidence": 6153,
+   "conf_ratio": 0.9778,
+   "kind": "soft"
+  },
+  {
+   "template": "noncoexistence",
+   "args": [
+    "Lead Declined",
+    "Follow-up Call (Missing Info)"
+   ],
+   "support": 6225,
+   "confidence": 6074,
+   "conf_ratio": 0.9757,
+   "kind": "soft"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Lead Qualified",
+    "Handle Lead"
+   ],
+   "support": 5784,
+   "confidence": 5784,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Handle Lead",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 5746,
+   "confidence": 5746,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Handle Lead",
+    "Proposal Created"
+   ],
+   "support": 5746,
+   "confidence": 5746,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Handle Lead",
+    "Offer Selected"
+   ],
+   "support": 5746,
+   "confidence": 5746,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Handle Lead",
+    "Proposal Sent"
+   ],
+   "support": 5746,
+   "confidence": 5746,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Handle Lead",
+    "Opportunity Finalized"
+   ],
+   "support": 5746,
+   "confidence": 5746,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Handle Lead"
+   ],
+   "support": 5746,
+   "confidence": 5746,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Created",
+    "Handle Lead"
+   ],
+   "support": 5746,
+   "confidence": 5746,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Offer Selected",
+    "Handle Lead"
+   ],
+   "support": 5746,
+   "confidence": 5746,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Sent",
+    "Handle Lead"
+   ],
+   "support": 5746,
+   "confidence": 5746,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Opportunity Finalized",
+    "Handle Lead"
+   ],
+   "support": 5746,
+   "confidence": 5746,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Submitted",
+    "Lead Declined"
+   ],
+   "support": 5262,
+   "confidence": 5262,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Registered in CRM",
+    "Lead Declined"
+   ],
+   "support": 5262,
+   "confidence": 5262,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Complete Lead Data",
+    "Opportunity Cancelled"
+   ],
+   "support": 4936,
+   "confidence": 4918,
+   "conf_ratio": 0.9964,
+   "kind": "soft"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Pre-qualified",
+    "Opportunity Cancelled"
+   ],
+   "support": 4936,
+   "confidence": 4849,
+   "conf_ratio": 0.9824,
+   "kind": "soft"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Opportunity Cancelled",
+    "Lead Pre-qualified"
+   ],
+   "support": 4936,
+   "confidence": 4936,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Opportunity Cancelled",
+    "Complete Lead Data"
+   ],
+   "support": 4936,
+   "confidence": 4795,
+   "conf_ratio": 0.9714,
+   "kind": "soft"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Submitted",
+    "Lead Pre-qualified"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Registered in CRM",
+    "Lead Pre-qualified"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altresponse",
+   "args": [
+    "Lead Pre-qualified",
+    "Complete Lead Data"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Qualified",
+    "Complete Lead Data"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Complete Lead Data",
+    "Deal Registered"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Complete Lead Data",
+    "Proposal Created"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Complete Lead Data",
+    "Deal Approved"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Complete Lead Data",
+    "Proposal Sent"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Complete Lead Data",
+    "Deal Won"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Complete Lead Data",
+    "Follow-up Call (Missing Info)"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Complete Lead Data",
+    "Validate Opportunity"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Complete Lead Data",
+    "Proposal Accepted"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Created",
+    "Complete Lead Data"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Offer Selected",
+    "Complete Lead Data"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Pre-qualified",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Pre-qualified",
+    "Deal Registered"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Pre-qualified",
+    "Proposal Created"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Pre-qualified",
+    "Deal Approved"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Pre-qualified",
+    "Offer Selected"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Pre-qualified",
+    "Proposal Sent"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Pre-qualified",
+    "Proposal Cancelled"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Pre-qualified",
+    "Proposal Returned"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Pre-qualified",
+    "Deal Won"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Pre-qualified",
+    "Follow-up Call (Missing Info)"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Pre-qualified",
+    "Validate Opportunity"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Pre-qualified",
+    "Opportunity Finalized"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Pre-qualified",
+    "Proposal Accepted"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Opportunity Finalized",
+    "Complete Lead Data"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Complete Lead Data",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 4935,
+   "confidence": 4933,
+   "conf_ratio": 0.9996,
+   "kind": "soft"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Complete Lead Data",
+    "Offer Selected"
+   ],
+   "support": 4935,
+   "confidence": 4934,
+   "conf_ratio": 0.9998,
+   "kind": "soft"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Complete Lead Data",
+    "Proposal Cancelled"
+   ],
+   "support": 4935,
+   "confidence": 4880,
+   "conf_ratio": 0.9889,
+   "kind": "soft"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Complete Lead Data",
+    "Proposal Returned"
+   ],
+   "support": 4935,
+   "confidence": 4727,
+   "conf_ratio": 0.9579,
+   "kind": "soft"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Pre-qualified",
+    "Complete Lead Data"
+   ],
+   "support": 4935,
+   "confidence": 4934,
+   "conf_ratio": 0.9998,
+   "kind": "soft"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Complete Lead Data"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Lead Pre-qualified"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Lead Qualified",
+    "Lead Pre-qualified"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Complete Lead Data",
+    "Lead Qualified"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Complete Lead Data",
+    "Lead Pre-qualified"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Complete Lead Data",
+    "Opportunity Finalized"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Registered",
+    "Complete Lead Data"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Registered",
+    "Lead Pre-qualified"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Created",
+    "Lead Pre-qualified"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Approved",
+    "Complete Lead Data"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Approved",
+    "Lead Pre-qualified"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Offer Selected",
+    "Lead Pre-qualified"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Sent",
+    "Lead Pre-qualified"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Cancelled",
+    "Complete Lead Data"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Cancelled",
+    "Lead Pre-qualified"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Returned",
+    "Complete Lead Data"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Returned",
+    "Lead Pre-qualified"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Won",
+    "Complete Lead Data"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Won",
+    "Lead Pre-qualified"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Missing Info)",
+    "Complete Lead Data"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Missing Info)",
+    "Lead Pre-qualified"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Validate Opportunity",
+    "Complete Lead Data"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Validate Opportunity",
+    "Lead Pre-qualified"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Opportunity Finalized",
+    "Lead Pre-qualified"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Accepted",
+    "Complete Lead Data"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Accepted",
+    "Lead Pre-qualified"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "responded_existence",
+   "args": [
+    "Complete Lead Data",
+    "Lead Pre-qualified"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "succession",
+   "args": [
+    "Lead Pre-qualified",
+    "Complete Lead Data"
+   ],
+   "support": 4935,
+   "confidence": 4935,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Qualified",
+    "Opportunity Cancelled"
+   ],
+   "support": 4195,
+   "confidence": 4167,
+   "conf_ratio": 0.9933,
+   "kind": "soft"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Opportunity Cancelled",
+    "Lead Qualified"
+   ],
+   "support": 4195,
+   "confidence": 4195,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Created",
+    "Opportunity Cancelled"
+   ],
+   "support": 4175,
+   "confidence": 4175,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Offer Selected",
+    "Opportunity Cancelled"
+   ],
+   "support": 4175,
+   "confidence": 4175,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Sent",
+    "Opportunity Cancelled"
+   ],
+   "support": 4175,
+   "confidence": 4175,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Opportunity Finalized",
+    "Opportunity Cancelled"
+   ],
+   "support": 4175,
+   "confidence": 4175,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Opportunity Cancelled"
+   ],
+   "support": 4175,
+   "confidence": 4171,
+   "conf_ratio": 0.999,
+   "kind": "soft"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Opportunity Cancelled",
+    "Proposal Created"
+   ],
+   "support": 4175,
+   "confidence": 4175,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Opportunity Cancelled",
+    "Offer Selected"
+   ],
+   "support": 4175,
+   "confidence": 4175,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Opportunity Cancelled",
+    "Proposal Sent"
+   ],
+   "support": 4175,
+   "confidence": 4175,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Opportunity Cancelled",
+    "Opportunity Finalized"
+   ],
+   "support": 4175,
+   "confidence": 4175,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Opportunity Cancelled",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 4175,
+   "confidence": 4090,
+   "conf_ratio": 0.9796,
+   "kind": "soft"
+  },
+  {
+   "template": "noncoexistence",
+   "args": [
+    "Opportunity Cancelled",
+    "Proposal Returned"
+   ],
+   "support": 4140,
+   "confidence": 4028,
+   "conf_ratio": 0.9729,
+   "kind": "soft"
+  },
+  {
+   "template": "noncoexistence",
+   "args": [
+    "Opportunity Cancelled",
+    "Validate Opportunity"
+   ],
+   "support": 4140,
+   "confidence": 4028,
+   "conf_ratio": 0.9729,
+   "kind": "soft"
+  },
+  {
+   "template": "noncoexistence",
+   "args": [
+    "Deal Registered",
+    "Opportunity Cancelled"
+   ],
+   "support": 3619,
+   "confidence": 3619,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "noncoexistence",
+   "args": [
+    "Opportunity Cancelled",
+    "Deal Approved"
+   ],
+   "support": 3619,
+   "confidence": 3619,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "noncoexistence",
+   "args": [
+    "Opportunity Cancelled",
+    "Deal Won"
+   ],
+   "support": 3619,
+   "confidence": 3619,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "noncoexistence",
+   "args": [
+    "Opportunity Cancelled",
+    "Proposal Accepted"
+   ],
+   "support": 3616,
+   "confidence": 3616,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Pre-qualified",
+    "Lead Qualified"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Submitted",
+    "Lead Qualified"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Registered in CRM",
+    "Lead Qualified"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altresponse",
+   "args": [
+    "Lead Qualified",
+    "Complete Lead Data"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altresponse",
+   "args": [
+    "Lead Qualified",
+    "Offer Selected"
+   ],
+   "support": 3427,
+   "confidence": 3367,
+   "conf_ratio": 0.9825,
+   "kind": "soft"
+  },
+  {
+   "template": "altresponse",
+   "args": [
+    "Lead Qualified",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 3427,
+   "confidence": 3367,
+   "conf_ratio": 0.9825,
+   "kind": "soft"
+  },
+  {
+   "template": "altresponse",
+   "args": [
+    "Lead Qualified",
+    "Proposal Sent"
+   ],
+   "support": 3427,
+   "confidence": 3367,
+   "conf_ratio": 0.9825,
+   "kind": "soft"
+  },
+  {
+   "template": "altresponse",
+   "args": [
+    "Lead Qualified",
+    "Proposal Created"
+   ],
+   "support": 3427,
+   "confidence": 3367,
+   "conf_ratio": 0.9825,
+   "kind": "soft"
+  },
+  {
+   "template": "altsuccession",
+   "args": [
+    "Lead Qualified",
+    "Opportunity Finalized"
+   ],
+   "support": 3427,
+   "confidence": 3367,
+   "conf_ratio": 0.9825,
+   "kind": "soft"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Qualified",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Qualified",
+    "Deal Registered"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Qualified",
+    "Proposal Created"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Qualified",
+    "Deal Approved"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Qualified",
+    "Proposal Sent"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Qualified",
+    "Proposal Cancelled"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Qualified",
+    "Proposal Returned"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Qualified",
+    "Deal Won"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Qualified",
+    "Follow-up Call (Missing Info)"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Qualified",
+    "Validate Opportunity"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Lead Qualified",
+    "Proposal Accepted"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Lead Qualified"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Registered",
+    "Lead Qualified"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Created",
+    "Lead Qualified"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Approved",
+    "Lead Qualified"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Offer Selected",
+    "Lead Qualified"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Sent",
+    "Lead Qualified"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Cancelled",
+    "Lead Qualified"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Returned",
+    "Lead Qualified"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Won",
+    "Lead Qualified"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Missing Info)",
+    "Lead Qualified"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Validate Opportunity",
+    "Lead Qualified"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Opportunity Finalized",
+    "Lead Qualified"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Accepted",
+    "Lead Qualified"
+   ],
+   "support": 3427,
+   "confidence": 3427,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "succession",
+   "args": [
+    "Lead Qualified",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 3427,
+   "confidence": 3367,
+   "conf_ratio": 0.9825,
+   "kind": "soft"
+  },
+  {
+   "template": "succession",
+   "args": [
+    "Lead Qualified",
+    "Proposal Created"
+   ],
+   "support": 3427,
+   "confidence": 3367,
+   "conf_ratio": 0.9825,
+   "kind": "soft"
+  },
+  {
+   "template": "succession",
+   "args": [
+    "Lead Qualified",
+    "Offer Selected"
+   ],
+   "support": 3427,
+   "confidence": 3367,
+   "conf_ratio": 0.9825,
+   "kind": "soft"
+  },
+  {
+   "template": "succession",
+   "args": [
+    "Lead Qualified",
+    "Proposal Sent"
+   ],
+   "support": 3427,
+   "confidence": 3367,
+   "conf_ratio": 0.9825,
+   "kind": "soft"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Submitted",
+    "Opportunity Finalized"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Registered in CRM",
+    "Opportunity Finalized"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Pre-qualified",
+    "Opportunity Finalized"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altresponse",
+   "args": [
+    "Opportunity Finalized",
+    "Proposal Sent"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altresponse",
+   "args": [
+    "Opportunity Finalized",
+    "Complete Lead Data"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altresponse",
+   "args": [
+    "Opportunity Finalized",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altresponse",
+   "args": [
+    "Opportunity Finalized",
+    "Proposal Created"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altsuccession",
+   "args": [
+    "Offer Selected",
+    "Proposal Created"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altsuccession",
+   "args": [
+    "Offer Selected",
+    "Proposal Sent"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "chainsuccession",
+   "args": [
+    "Proposal Created",
+    "Proposal Sent"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "coexistence",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Proposal Created"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "coexistence",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Offer Selected"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "coexistence",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Proposal Sent"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "coexistence",
+   "args": [
+    "Offer Selected",
+    "Opportunity Finalized"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Follow-up Call (Missing Info)"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Created",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Created",
+    "Deal Registered"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Created",
+    "Deal Approved"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Created",
+    "Proposal Cancelled"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Created",
+    "Proposal Returned"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Created",
+    "Deal Won"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Created",
+    "Follow-up Call (Missing Info)"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Created",
+    "Validate Opportunity"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Created",
+    "Proposal Accepted"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Offer Selected",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Offer Selected",
+    "Deal Registered"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Offer Selected",
+    "Deal Approved"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Offer Selected",
+    "Proposal Sent"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Offer Selected",
+    "Proposal Cancelled"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Offer Selected",
+    "Proposal Returned"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Offer Selected",
+    "Deal Won"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Offer Selected",
+    "Follow-up Call (Missing Info)"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Offer Selected",
+    "Validate Opportunity"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Offer Selected",
+    "Proposal Accepted"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Sent",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Sent",
+    "Deal Registered"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Sent",
+    "Deal Approved"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Sent",
+    "Proposal Cancelled"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Sent",
+    "Proposal Returned"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Sent",
+    "Deal Won"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Sent",
+    "Follow-up Call (Missing Info)"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Sent",
+    "Validate Opportunity"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Sent",
+    "Proposal Accepted"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Opportunity Finalized",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Opportunity Finalized",
+    "Deal Registered"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Opportunity Finalized",
+    "Deal Approved"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Opportunity Finalized",
+    "Proposal Sent"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Opportunity Finalized",
+    "Proposal Cancelled"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Opportunity Finalized",
+    "Proposal Returned"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Opportunity Finalized",
+    "Deal Won"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Opportunity Finalized",
+    "Follow-up Call (Missing Info)"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Opportunity Finalized",
+    "Validate Opportunity"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Opportunity Finalized",
+    "Proposal Accepted"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Deal Registered"
+   ],
+   "support": 3367,
+   "confidence": 3362,
+   "conf_ratio": 0.9985,
+   "kind": "soft"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Deal Approved"
+   ],
+   "support": 3367,
+   "confidence": 3337,
+   "conf_ratio": 0.9911,
+   "kind": "soft"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Proposal Cancelled"
+   ],
+   "support": 3367,
+   "confidence": 3361,
+   "conf_ratio": 0.9982,
+   "kind": "soft"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Deal Won"
+   ],
+   "support": 3367,
+   "confidence": 3361,
+   "conf_ratio": 0.9982,
+   "kind": "soft"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Validate Opportunity"
+   ],
+   "support": 3367,
+   "confidence": 3355,
+   "conf_ratio": 0.9964,
+   "kind": "soft"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Proposal Accepted"
+   ],
+   "support": 3367,
+   "confidence": 3307,
+   "conf_ratio": 0.9822,
+   "kind": "soft"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Cancelled",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 3367,
+   "confidence": 3327,
+   "conf_ratio": 0.9881,
+   "kind": "soft"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Proposal Created"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Offer Selected"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Proposal Sent"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Opportunity Finalized"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Registered",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Registered",
+    "Proposal Created"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Registered",
+    "Offer Selected"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Registered",
+    "Proposal Sent"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Registered",
+    "Opportunity Finalized"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Created",
+    "Offer Selected"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Created",
+    "Opportunity Finalized"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Approved",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Approved",
+    "Proposal Created"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Approved",
+    "Offer Selected"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Approved",
+    "Proposal Sent"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Approved",
+    "Opportunity Finalized"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Sent",
+    "Proposal Created"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Sent",
+    "Offer Selected"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Sent",
+    "Opportunity Finalized"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Cancelled",
+    "Proposal Created"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Cancelled",
+    "Offer Selected"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Cancelled",
+    "Proposal Sent"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Cancelled",
+    "Opportunity Finalized"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Returned",
+    "Proposal Created"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Returned",
+    "Offer Selected"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Returned",
+    "Proposal Sent"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Returned",
+    "Opportunity Finalized"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Won",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Won",
+    "Proposal Created"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Won",
+    "Offer Selected"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Won",
+    "Proposal Sent"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Won",
+    "Opportunity Finalized"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Missing Info)",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Missing Info)",
+    "Proposal Created"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Missing Info)",
+    "Offer Selected"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Missing Info)",
+    "Proposal Sent"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Missing Info)",
+    "Opportunity Finalized"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Validate Opportunity",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Validate Opportunity",
+    "Proposal Created"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Validate Opportunity",
+    "Offer Selected"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Validate Opportunity",
+    "Proposal Sent"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Validate Opportunity",
+    "Opportunity Finalized"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Accepted",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Accepted",
+    "Proposal Created"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Accepted",
+    "Offer Selected"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Accepted",
+    "Proposal Sent"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Accepted",
+    "Opportunity Finalized"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Proposal Returned"
+   ],
+   "support": 3367,
+   "confidence": 3260,
+   "conf_ratio": 0.9682,
+   "kind": "soft"
+  },
+  {
+   "template": "precedence",
+   "args": [
+    "Complete Lead Data",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "precedence",
+   "args": [
+    "Proposal Sent",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "succession",
+   "args": [
+    "Opportunity Finalized",
+    "Follow-up Call (Proposal)"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "succession",
+   "args": [
+    "Opportunity Finalized",
+    "Proposal Created"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "succession",
+   "args": [
+    "Opportunity Finalized",
+    "Proposal Sent"
+   ],
+   "support": 3367,
+   "confidence": 3367,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "precedence",
+   "args": [
+    "Lead Registered in CRM",
+    "Handle Lead"
+   ],
+   "support": 3290,
+   "confidence": 3290,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "noncoexistence",
+   "args": [
+    "Opportunity Cancelled",
+    "Follow-up Call (Missing Info)"
+   ],
+   "support": 3050,
+   "confidence": 2950,
+   "conf_ratio": 0.9672,
+   "kind": "soft"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Proposal Sent",
+    "Proposal Returned"
+   ],
+   "support": 2216,
+   "confidence": 2216,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Proposal Created",
+    "Proposal Returned"
+   ],
+   "support": 2216,
+   "confidence": 2216,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Offer Selected",
+    "Proposal Returned"
+   ],
+   "support": 2216,
+   "confidence": 2216,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altresponse",
+   "args": [
+    "Proposal Returned",
+    "Validate Opportunity"
+   ],
+   "support": 2216,
+   "confidence": 2216,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Returned",
+    "Deal Registered"
+   ],
+   "support": 2216,
+   "confidence": 2216,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Returned",
+    "Deal Approved"
+   ],
+   "support": 2216,
+   "confidence": 2216,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Returned",
+    "Deal Won"
+   ],
+   "support": 2216,
+   "confidence": 2216,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Returned",
+    "Follow-up Call (Missing Info)"
+   ],
+   "support": 2216,
+   "confidence": 2216,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Returned",
+    "Validate Opportunity"
+   ],
+   "support": 2216,
+   "confidence": 2216,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Returned",
+    "Proposal Accepted"
+   ],
+   "support": 2216,
+   "confidence": 2216,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Validate Opportunity",
+    "Follow-up Call (Missing Info)"
+   ],
+   "support": 2216,
+   "confidence": 2216,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Deal Approved",
+    "Validate Opportunity"
+   ],
+   "support": 2216,
+   "confidence": 2157,
+   "conf_ratio": 0.9734,
+   "kind": "soft"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Validate Opportunity",
+    "Deal Registered"
+   ],
+   "support": 2216,
+   "confidence": 2213,
+   "conf_ratio": 0.9986,
+   "kind": "soft"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Validate Opportunity",
+    "Deal Approved"
+   ],
+   "support": 2216,
+   "confidence": 2210,
+   "conf_ratio": 0.9973,
+   "kind": "soft"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Validate Opportunity",
+    "Deal Won"
+   ],
+   "support": 2216,
+   "confidence": 2214,
+   "conf_ratio": 0.9991,
+   "kind": "soft"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Validate Opportunity",
+    "Proposal Accepted"
+   ],
+   "support": 2216,
+   "confidence": 2205,
+   "conf_ratio": 0.995,
+   "kind": "soft"
+  },
+  {
+   "template": "nonchainsuccession",
+   "args": [
+    "Proposal Accepted",
+    "Validate Opportunity"
+   ],
+   "support": 2216,
+   "confidence": 2169,
+   "conf_ratio": 0.9788,
+   "kind": "soft"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Registered",
+    "Proposal Returned"
+   ],
+   "support": 2216,
+   "confidence": 2216,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Approved",
+    "Proposal Returned"
+   ],
+   "support": 2216,
+   "confidence": 2216,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Deal Won",
+    "Proposal Returned"
+   ],
+   "support": 2216,
+   "confidence": 2216,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Missing Info)",
+    "Proposal Returned"
+   ],
+   "support": 2216,
+   "confidence": 2216,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Follow-up Call (Missing Info)",
+    "Validate Opportunity"
+   ],
+   "support": 2216,
+   "confidence": 2216,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Validate Opportunity",
+    "Proposal Returned"
+   ],
+   "support": 2216,
+   "confidence": 2216,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "nonsuccession",
+   "args": [
+    "Proposal Accepted",
+    "Proposal Returned"
+   ],
+   "support": 2216,
+   "confidence": 2216,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "precedence",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Validate Opportunity"
+   ],
+   "support": 2216,
+   "confidence": 2216,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "precedence",
+   "args": [
+    "Complete Lead Data",
+    "Proposal Returned"
+   ],
+   "support": 2216,
+   "confidence": 2216,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "responded_existence",
+   "args": [
+    "Validate Opportunity",
+    "Proposal Returned"
+   ],
+   "support": 2216,
+   "confidence": 2216,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "succession",
+   "args": [
+    "Proposal Returned",
+    "Validate Opportunity"
+   ],
+   "support": 2216,
+   "confidence": 2216,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Submitted",
+    "Opportunity Cancelled"
+   ],
+   "support": 2036,
+   "confidence": 2036,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Registered in CRM",
+    "Opportunity Cancelled"
+   ],
+   "support": 2036,
+   "confidence": 2036,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Pre-qualified",
+    "Opportunity Cancelled"
+   ],
+   "support": 2036,
+   "confidence": 2035,
+   "conf_ratio": 0.9995,
+   "kind": "soft"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Proposal Created",
+    "Proposal Cancelled"
+   ],
+   "support": 1844,
+   "confidence": 1844,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Proposal Sent",
+    "Proposal Cancelled"
+   ],
+   "support": 1844,
+   "confidence": 1844,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "precedence",
+   "args": [
+    "Complete Lead Data",
+    "Proposal Cancelled"
+   ],
+   "support": 1844,
+   "confidence": 1844,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Complete Lead Data",
+    "Deal Won"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Proposal Returned",
+    "Deal Approved"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Proposal Created",
+    "Deal Approved"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Pre-qualified",
+    "Deal Registered"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Qualified",
+    "Deal Approved"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Proposal Returned",
+    "Deal Registered"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Qualified",
+    "Deal Registered"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Offer Selected",
+    "Deal Won"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Proposal Sent",
+    "Deal Approved"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Registered in CRM",
+    "Deal Approved"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Opportunity Finalized",
+    "Deal Won"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Submitted",
+    "Deal Registered"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Proposal Sent",
+    "Deal Registered"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Registered in CRM",
+    "Deal Registered"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Complete Lead Data",
+    "Deal Approved"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Deal Won"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Opportunity Finalized",
+    "Deal Approved"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Proposal Created",
+    "Deal Registered"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Complete Lead Data",
+    "Deal Registered"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Pre-qualified",
+    "Deal Won"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Pre-qualified",
+    "Deal Approved"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Offer Selected",
+    "Deal Approved"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Offer Selected",
+    "Deal Registered"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Opportunity Finalized",
+    "Deal Registered"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Deal Approved"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Submitted",
+    "Deal Won"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Proposal Sent",
+    "Deal Won"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Registered in CRM",
+    "Deal Won"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Deal Registered"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Proposal Returned",
+    "Deal Won"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Proposal Created",
+    "Deal Won"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Qualified",
+    "Deal Won"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Submitted",
+    "Deal Approved"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "coexistence",
+   "args": [
+    "Deal Registered",
+    "Deal Approved"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "coexistence",
+   "args": [
+    "Deal Registered",
+    "Deal Won"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "coexistence",
+   "args": [
+    "Deal Approved",
+    "Deal Won"
+   ],
+   "support": 1583,
+   "confidence": 1583,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "coexistence",
+   "args": [
+    "Deal Registered",
+    "Proposal Accepted"
+   ],
+   "support": 1583,
+   "confidence": 1580,
+   "conf_ratio": 0.9981,
+   "kind": "soft"
+  },
+  {
+   "template": "coexistence",
+   "args": [
+    "Deal Approved",
+    "Proposal Accepted"
+   ],
+   "support": 1583,
+   "confidence": 1580,
+   "conf_ratio": 0.9981,
+   "kind": "soft"
+  },
+  {
+   "template": "coexistence",
+   "args": [
+    "Deal Won",
+    "Proposal Accepted"
+   ],
+   "support": 1583,
+   "confidence": 1580,
+   "conf_ratio": 0.9981,
+   "kind": "soft"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Submitted",
+    "Proposal Accepted"
+   ],
+   "support": 1580,
+   "confidence": 1580,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Proposal Sent",
+    "Proposal Accepted"
+   ],
+   "support": 1580,
+   "confidence": 1580,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Registered in CRM",
+    "Proposal Accepted"
+   ],
+   "support": 1580,
+   "confidence": 1580,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Proposal Returned",
+    "Proposal Accepted"
+   ],
+   "support": 1580,
+   "confidence": 1580,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Proposal Created",
+    "Proposal Accepted"
+   ],
+   "support": 1580,
+   "confidence": 1580,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Qualified",
+    "Proposal Accepted"
+   ],
+   "support": 1580,
+   "confidence": 1580,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Complete Lead Data",
+    "Proposal Accepted"
+   ],
+   "support": 1580,
+   "confidence": 1580,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Offer Selected",
+    "Proposal Accepted"
+   ],
+   "support": 1580,
+   "confidence": 1580,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Opportunity Finalized",
+    "Proposal Accepted"
+   ],
+   "support": 1580,
+   "confidence": 1580,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Follow-up Call (Proposal)",
+    "Proposal Accepted"
+   ],
+   "support": 1580,
+   "confidence": 1580,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "altprecedence",
+   "args": [
+    "Lead Pre-qualified",
+    "Proposal Accepted"
+   ],
+   "support": 1580,
+   "confidence": 1580,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  },
+  {
+   "template": "precedence",
+   "args": [
+    "Validate Opportunity",
+    "Follow-up Call (Missing Info)"
+   ],
+   "support": 1114,
+   "confidence": 1114,
+   "conf_ratio": 1.0,
+   "kind": "hard"
+  }
+ ],
+ "conformance": [
+  {
+   "model": "Raw",
+   "constraints": 1310,
+   "mean_constraint_fitness": 0.9991,
+   "fully_compliant_cases": 0.793
+  },
+  {
+   "model": "Refined (all)",
+   "constraints": 429,
+   "mean_constraint_fitness": 0.9992,
+   "fully_compliant_cases": 0.8222
+  },
+  {
+   "model": "Refined: hard rules",
+   "constraints": 380,
+   "mean_constraint_fitness": 1.0,
+   "fully_compliant_cases": 1.0
+  },
+  {
+   "model": "Refined: soft rules",
+   "constraints": 49,
+   "mean_constraint_fitness": 0.9927,
+   "fully_compliant_cases": 0.8222
+  }
+ ],
+ "conformance_train": [
+  {
+   "model": "Refined (all)",
+   "constraints": 429,
+   "mean_constraint_fitness": 0.9993,
+   "fully_compliant_cases": 0.8384
+  },
+  {
+   "model": "Refined: hard rules",
+   "constraints": 380,
+   "mean_constraint_fitness": 1.0,
+   "fully_compliant_cases": 1.0
+  }
+ ],
+ "baseline": [
+  {
+   "model": "Inductive Miner (noise=0.0)",
+   "places": 52,
+   "transitions": 79,
+   "arcs": 174,
+   "size": 305,
+   "log_fitness": 0.9986,
+   "fit_traces_pct": 0.9716,
+   "precision": 0.1399
+  },
+  {
+   "model": "Inductive Miner (noise=0.2)",
+   "places": 36,
+   "transitions": 53,
+   "arcs": 114,
+   "size": 203,
+   "log_fitness": 0.9786,
+   "fit_traces_pct": 0.6843,
+   "precision": 0.2309
+  },
+  {
+   "model": "Heuristics Miner (dep=0.9)",
+   "places": 50,
+   "transitions": 84,
+   "arcs": 189,
+   "size": 323,
+   "log_fitness": 0.8964,
+   "fit_traces_pct": 0.4552,
+   "precision": 0.8991
+  }
+ ],
+ "negatives": {
+  "n_positive": 1000,
+  "n_negative": 2896
+ },
+ "discrimination": [
+  {
+   "model": "Declarative refined: hard rules",
+   "accept_positive": 1.0,
+   "reject_negative": 0.711,
+   "balanced_accuracy": 0.8555
+  },
+  {
+   "model": "Declarative refined: all rules",
+   "accept_positive": 0.819,
+   "reject_negative": 0.8249,
+   "balanced_accuracy": 0.8219
+  },
+  {
+   "model": "Inductive Miner (noise=0.0)",
+   "accept_positive": 0.981,
+   "reject_negative": 0.4751,
+   "balanced_accuracy": 0.728
+  },
+  {
+   "model": "Inductive Miner (noise=0.2)",
+   "accept_positive": 0.685,
+   "reject_negative": 0.7707,
+   "balanced_accuracy": 0.7279
+  },
+  {
+   "model": "Heuristics Miner (dep=0.9)",
+   "accept_positive": 0.437,
+   "reject_negative": 0.9669,
+   "balanced_accuracy": 0.7019
+  }
+ ],
+ "followup_vs_win": [
+  {
+   "bin": "<=1 day",
+   "cases": 2523,
+   "win_rate": 0.4633
+  },
+  {
+   "bin": "1-3 days",
+   "cases": 125,
+   "win_rate": 0.616
+  },
+  {
+   "bin": "3-7 days",
+   "cases": 969,
+   "win_rate": 0.6017
+  },
+  {
+   "bin": ">7 days",
+   "cases": 1071,
+   "win_rate": 0.3894
+  }
+ ],
+ "proposal_cases_without_followup": 0,
+ "followup_chi2": {
+  "chi2": 44.33,
+  "p": 2.7756835796784418e-11,
+  "n": 4688
+ },
+ "first_touch_vs_win": [
+  {
+   "bin": "<=1 h",
+   "cases": 4262,
+   "win_rate": 0.2527
+  },
+  {
+   "bin": "1-24 h",
+   "cases": 4526,
+   "win_rate": 0.2342
+  },
+  {
+   "bin": "1-3 days",
+   "cases": 461,
+   "win_rate": 0.2364
+  },
+  {
+   "bin": ">3 days",
+   "cases": 10,
+   "win_rate": 0.0
+  }
+ ],
+ "first_touch_chi2": {
+  "chi2": 0.28,
+  "p": 0.5999885626535717,
+  "n": 9259
+ },
+ "first_touch_median_h": 1.26,
+ "win_by_soft_compliance": {
+  "False": {
+   "cases": 677,
+   "win_rate": 0.2939
+  },
+  "True": {
+   "cases": 3130,
+   "win_rate": 0.1482
+  }
+ },
+ "soft_compliance_chi2": {
+  "chi2": 81.15,
+  "p": 2.0951626488872981e-19,
+  "n": 3807
+ },
+ "segments": [
+  {
+   "segment": "Q1 (smallest)",
+   "cases": 1129,
+   "amount_min": 70,
+   "amount_max": 5000,
+   "win_rate": 0.0859,
+   "soft_rule_compliance": 0.8813
+  },
+  {
+   "segment": "Q2",
+   "cases": 1061,
+   "amount_min": 5200,
+   "amount_max": 10000,
+   "win_rate": 0.1649,
+   "soft_rule_compliance": 0.8143
+  },
+  {
+   "segment": "Q3",
+   "cases": 668,
+   "amount_min": 10030,
+   "amount_max": 19000,
+   "win_rate": 0.244,
+   "soft_rule_compliance": 0.8039
+  },
+  {
+   "segment": "Q4 (largest)",
+   "cases": 949,
+   "amount_min": 19500,
+   "amount_max": 99999,
+   "win_rate": 0.2403,
+   "soft_rule_compliance": 0.7734
+  }
+ ],
+ "followup_resources": {
+  "n_resources": 52,
+  "top10_share": 0.5262
+ }
+}

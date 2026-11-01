@@ -1,0 +1,15 @@
+digraph G { rankdir=LR; bgcolor="white"; nodesep=0.35; ranksep=0.45; compound=true;
+node [shape=box style="rounded,filled" fillcolor="#f7f7f5" color="#52514e" fontname="DejaVu Sans" fontsize=10];
+edge [color="#52514e" fontname="DejaVu Sans" fontsize=8.5 fontcolor="#52514e" arrowsize=0.7];
+ev [label="CRM record change\n(lead, opportunity,\nquote, task)"];
+mon [label="Declarative rule\nmonitor\n(refined model)" fillcolor="#eef4fc" color="#2a78d6"];
+subgraph cluster_h { label="Hard rules (100% support)"; fontname="DejaVu Sans"; fontsize=10; color="#2a78d6";
+  h1 [label="Record-triggered flow:\nauto-create / auto-send\n(chain succession)"];
+  h2 [label="Validation rule:\nblock forbidden step\n(precedence, not co-existence)"]; }
+subgraph cluster_s { label="Soft rules (<100% support)"; fontname="DejaVu Sans"; fontsize=10; color="#eb6834";
+  s1 [label="Alert / task suggestion\nto sales rep"];
+  s2 [label="Dashboard: deviations\n& outcomes"]; }
+log [label="Event log\n(feedback for re-mining)"];
+ev->mon; mon->h1; mon->h2; mon->s1; mon->s2; h1->log; h2->log; s1->log; s2->log;
+log->mon [style=dashed label="periodic re-mining" constraint=false];
+}
