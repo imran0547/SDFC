@@ -134,7 +134,7 @@ while (i < src.length) {
 }
 
 const doc = new Document({
-  creator: "Imran Basha Shaik, Ramya Chikkla, Prathyusha Pochampally",
+  creator: "Imran Basha Shaik, Prathyusha Pochampally",
   title: "Autonomous ETL Pipelines for Salesforce M&A Consolidation",
   styles: {
     default: { document: { run: { font: FONT, size: BODY } } },
