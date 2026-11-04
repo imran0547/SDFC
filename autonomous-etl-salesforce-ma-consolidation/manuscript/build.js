@@ -7,7 +7,8 @@ const {
   LevelFormat, ExternalHyperlink,
 } = require("docx");
 
-const src = fs.readFileSync(path.join(__dirname, "paper.md"), "utf8").split("\n");
+const IN = process.argv[2] || "paper.md", OUT = process.argv[3] || "out.docx";
+const src = fs.readFileSync(path.join(__dirname, IN), "utf8").split("\n");
 const FONT = "Times New Roman";
 const BODY = 22; // 11 pt
 const CONTENT_W = 9026; // A4 width minus 1" margins (DXA)
@@ -156,6 +157,6 @@ const doc = new Document({
 });
 
 Packer.toBuffer(doc).then((b) => {
-  fs.writeFileSync(path.join(__dirname, "out.docx"), b);
+  fs.writeFileSync(path.join(__dirname, OUT), b);
   console.log("written", b.length);
 });
