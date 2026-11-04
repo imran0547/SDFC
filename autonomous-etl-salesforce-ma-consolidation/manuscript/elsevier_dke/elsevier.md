@@ -268,7 +268,7 @@ Imran Basha Shaik: [roles to be confirmed by the authors, e.g., Conceptualizatio
 
 # Data availability
 
-The data generator, pipeline implementation, experiment scripts and raw results are openly available at [repository URL to be added by the authors]. All results reported in this article can be regenerated with the command "python run_experiments.py".
+The data generator, pipeline implementation, experiment scripts and raw results are openly available at https://github.com/imran0547/SDFC/tree/add-autonomous-etl-salesforce-ma-consolidation/autonomous-etl-salesforce-ma-consolidation. All results reported in this article can be regenerated with the command "python run_experiments.py".
 
 # Declaration of generative AI and AI-assisted technologies in the manuscript preparation process
 
