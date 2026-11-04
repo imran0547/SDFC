@@ -256,7 +256,7 @@ Future work should (i) implement the framework on a Jitterbit Harmony deployment
 
 # CRediT authorship contribution statement
 
-Imran Basha Shaik: Conceptualization, Writing – original draft, Writing – review & editing. Sahla Sultana: Conceptualization, Methodology, Validation, Project administration. Khader Moinuddin Shaik: Conceptualization, Methodology, Project administration.
+Imran Basha Shaik: Conceptualization, Writing – original draft, Writing – review & editing. Sahla Sultana: Conceptualization, Methodology, Validation, Project administration. Khader Moinuddin Shaik: Conceptualization, Methodology, Software, Project administration.
 
 # Declaration of competing interest
 
