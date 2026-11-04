@@ -2,7 +2,7 @@ TITLE: Autonomous ETL Pipelines for Salesforce M&A Consolidation: A Reference Fr
 
 AUTHORS: Imran Basha Shaik*, Sahla Sultana, Khader Moinuddin Shaik
 
-AFFIL: Imran Basha Shaik, Frisco, TX, USA · ORCID 0009-0002-1210-5646 · [e-mail]
+AFFIL: Imran Basha Shaik, Frisco, TX, USA · ORCID 0009-0002-1210-5646 · imran.shaik159@gmail.com
 AFFIL: Sahla Sultana, Frisco, TX, USA
 AFFIL: Khader Moinuddin Shaik, Frisco, TX, USA
 AFFIL: *Corresponding author
@@ -260,9 +260,9 @@ Data and code availability. The data generator, pipeline, experiment scripts and
 
 Use of generative AI. Generative AI (Claude, Anthropic) was used to help write the simulation code and to draft and edit the manuscript. The authors reviewed the code, verified every reported result against the experiment output, checked all references, and take full responsibility for the content.
 
-Conflicts of interest. [To be completed by the authors.]
+Conflicts of interest. Imran Basha Shaik was previously employed by Salesforce.com. This work was not funded or reviewed by Salesforce or by Jitterbit. The authors declare no other competing interests.
 
-Funding. [To be completed by the authors.]
+Funding. This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
 
 # References
 

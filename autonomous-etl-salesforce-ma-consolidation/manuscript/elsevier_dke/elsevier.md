@@ -2,7 +2,7 @@ TITLE: Autonomous ETL Pipelines for Salesforce M&A Consolidation: A Reference Fr
 
 AUTHORS: Imran Basha Shaik*, Sahla Sultana, Khader Moinuddin Shaik
 
-AFFIL: Imran Basha Shaik, Frisco, TX, USA · ORCID 0009-0002-1210-5646 · [corresponding author e-mail]
+AFFIL: Imran Basha Shaik, Frisco, TX, USA · ORCID 0009-0002-1210-5646 · imran.shaik159@gmail.com
 AFFIL: Sahla Sultana, Frisco, TX, USA
 AFFIL: Khader Moinuddin Shaik, Frisco, TX, USA
 AFFIL: *Corresponding author
@@ -256,15 +256,15 @@ Future work should (i) implement the framework on a Jitterbit Harmony deployment
 
 # CRediT authorship contribution statement
 
-Imran Basha Shaik: [roles to be confirmed by the authors, e.g., Conceptualization, Writing – original draft, Writing – review & editing]. Sahla Sultana: Conceptualization, Methodology [to be confirmed]. Khader Moinuddin Shaik: Conceptualization, Methodology [to be confirmed].
+Imran Basha Shaik: Conceptualization, Writing – original draft, Writing – review & editing. Sahla Sultana: Conceptualization, Methodology, Project administration. Khader Moinuddin Shaik: Conceptualization, Methodology, Project administration.
 
 # Declaration of competing interest
 
-[To be confirmed by the authors. Suggested wording: Imran Basha Shaik was previously employed by Salesforce.com. This work was not funded or reviewed by Salesforce or by Jitterbit. The authors declare no other competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.]
+Imran Basha Shaik was previously employed by Salesforce.com. This work was not funded or reviewed by Salesforce or by Jitterbit. The authors declare no other competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
 
 # Funding
 
-[To be confirmed by the authors, e.g., "This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors."]
+This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
 
 # Data availability
 
