@@ -143,7 +143,7 @@ TABLE: Table 3. Experiments
 | E4 | RQ3 quality gates, with and without | Same as E2 | 5 seeds |
 | E5 | RQ5 CDC, idempotency, fault containment, equivalence | 20,000 companies (128,037 source records); 120 hourly batches | 1 run |
 
-All experiments ran on a Linux container with two CPU cores, Python 3.13, RapidFuzz 3.14 for string similarity and SQLite as the stand-in target. Absolute times therefore describe local computation and exclude network latency and Salesforce API limits.
+The reference prototype and the experiment scripts were written with the assistance of a generative AI coding tool (Claude, Anthropic); the authors reviewed the code and verified every reported number against the raw experiment output. All experiments ran on a Linux container with two CPU cores, Python 3.13, RapidFuzz 3.14 for string similarity and SQLite as the stand-in target. Absolute times therefore describe local computation and exclude network latency and Salesforce API limits.
 
 # 5. Results
 
