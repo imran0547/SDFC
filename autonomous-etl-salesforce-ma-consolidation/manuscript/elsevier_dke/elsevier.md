@@ -1,9 +1,10 @@
 TITLE: Autonomous ETL Pipelines for Salesforce M&A Consolidation: A Reference Framework, Jitterbit Mapping and Reproducible Simulation Study
 
-AUTHORS: Imran Basha Shaik*, Prathyusha Pochampally
+AUTHORS: Imran Basha Shaik*, Sahla Sultana, Khader Moinuddin Shaik
 
 AFFIL: Imran Basha Shaik, Frisco, TX, USA · ORCID 0009-0002-1210-5646 · [corresponding author e-mail]
-AFFIL: Prathyusha Pochampally, Frisco, TX, USA · Prathyusha.Pochampally11@hotmail.com
+AFFIL: Sahla Sultana, Frisco, TX, USA
+AFFIL: Khader Moinuddin Shaik, Frisco, TX, USA
 AFFIL: *Corresponding author
 
 ABSTRACT: Merging companies that each run Salesforce must consolidate their customer data into a single organization while both source systems remain in use. This requires reconciling different schemas and picklists, resolving duplicate customers across and within organizations, preserving relationships between records, and keeping the target current until cutover. This article proposes a reference framework for an autonomous extract-transform-load pipeline for this task. It combines partitioned bulk extraction, declarative mapping templates, rule-based and statistical quality gates, master data management with deterministic and blocked fuzzy matching, constrained loading with per-record error capture, and change data capture guarded by a data-health circuit breaker. Each stage is mapped to Jitterbit Integration Studio constructs. The framework was implemented as an open reference prototype and evaluated on synthetic two-organization scenarios with known ground truth at three scales, from 32,040 to 383,973 source records, over five random seeds. At a preset threshold, hybrid matching reached pairwise F1 scores of 0.918 for accounts and 0.885 for contacts; calibrating the threshold per object would raise these to 0.938 and 0.963. The quality gates prevented all load failures and all silent loss of unmapped picklist values without wrongly flagging any clean record, whereas removing them produced about 1,000 load failures per run. Over five simulated days of hourly incremental synchronization, replayed events were ignored, an injected upstream fault was contained in the batch in which it occurred, and the target agreed with a full rebuild on more than 99.3% of field values. Validation on a production deployment remains future work.
@@ -255,11 +256,11 @@ Future work should (i) implement the framework on a Jitterbit Harmony deployment
 
 # CRediT authorship contribution statement
 
-Imran Basha Shaik: [roles to be confirmed by the authors, e.g., Conceptualization, Methodology, Software, Validation, Writing – original draft]. Prathyusha Pochampally: [roles to be confirmed by the authors, e.g., Investigation, Validation, Writing – review & editing].
+Imran Basha Shaik: [roles to be confirmed by the authors, e.g., Conceptualization, Writing – original draft, Writing – review & editing]. Sahla Sultana: Conceptualization, Methodology [to be confirmed]. Khader Moinuddin Shaik: Conceptualization, Methodology [to be confirmed].
 
 # Declaration of competing interest
 
-[To be confirmed by the authors. Suggested wording: Prathyusha Pochampally is employed by Salesforce, and Imran Basha Shaik was previously employed by Salesforce.com. This work was conducted independently and was not funded or reviewed by Salesforce or by Jitterbit. The authors declare no other competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.]
+[To be confirmed by the authors. Suggested wording: Imran Basha Shaik was previously employed by Salesforce.com. This work was not funded or reviewed by Salesforce or by Jitterbit. The authors declare no other competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.]
 
 # Funding
 
